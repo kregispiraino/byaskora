@@ -1,0 +1,259 @@
+/* ByAskora / Sinal — an original, text-free kinetic scene.
+   v1.9: transparent stage on the page; graphite components retain their materials. */
+.hero-stage.signal-stage {
+  --signal-cyan: #1fe1e7;
+  --signal-mint: #7df0c9;
+  --signal-orange: #ffb13a;
+  --core-x: 50%;
+  --core-y: 50%;
+  --core-size: 98px;
+  position: relative;
+  padding: 0;
+  aspect-ratio: 1000/450;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+  isolation: isolate;
+  box-shadow: none;
+  touch-action: pan-y;
+}
+/* No backdrop, vignette, perimeter or inset border: the page is the surface. */
+.signal-stage::before,
+.signal-stage::after {
+  content: none;
+  display: none;
+}
+.signal-canvas,
+.signal-fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.signal-canvas {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.signal-fallback {
+  z-index: 0;
+  opacity: 0.5;
+}
+.signal-stage[data-ready] .signal-canvas {
+  opacity: 1;
+}
+.signal-stage[data-ready] .signal-fallback {
+  display: none;
+}
+.signal-core {
+  position: absolute;
+  z-index: 4;
+  top: var(--core-y);
+  left: var(--core-x);
+  width: var(--core-size);
+  height: calc(var(--core-size) * 1.15);
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 25%;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 10px;
+  touch-action: manipulation;
+}
+.signal-core:focus-visible {
+  outline: 2px solid var(--signal-cyan);
+  border-radius: 25%;
+}
+.signal-core-rim {
+  position: absolute;
+  inset: -2px;
+  border-radius: 24%;
+  background: linear-gradient(
+    150deg,
+    #626868 0%,
+    #2b3031 28%,
+    #191d1f 55%,
+    #4a5051 100%
+  );
+  box-shadow:
+    0 18px 26px #14232426,
+    0 4px 6px #14232424;
+  transition:
+    background 0.5s,
+    box-shadow 0.5s;
+}
+.signal-core-rim::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 23%;
+  background: #111516;
+  border: 1px solid #0008;
+}
+.signal-core-face {
+  position: absolute;
+  inset: 1px;
+  border-radius: 23%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10%;
+  background: linear-gradient(140deg, #303637 0%, #1f2325 40%, #131617 100%);
+  box-shadow:
+    inset 0 1px 0 #ffffff1a,
+    inset 0 -3px 4px #0009;
+  transition:
+    transform 0.25s ease,
+    background 0.5s ease;
+}
+.signal-core-face::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 0%, #ffffff08, transparent 70%);
+  pointer-events: none;
+}
+.signal-core img {
+  height: 50%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  filter: invert(1) brightness(0.76) contrast(0.92);
+  opacity: 0.9;
+  transition:
+    filter 0.5s,
+    opacity 0.5s;
+}
+.signal-power-icon {
+  width: 13%;
+  height: 13%;
+  color: #929c9e;
+  transition:
+    color 0.5s,
+    filter 0.5s;
+}
+.signal-core:hover .signal-core-face {
+  transform: translateY(-2px);
+}
+.signal-core:hover .signal-core-rim {
+  box-shadow:
+    0 18px 28px #14232430,
+    0 4px 6px #14232426,
+    0 0 36px -12px #1fe1e755;
+}
+.signal-core:hover .signal-power-icon {
+  color: var(--signal-cyan);
+}
+.signal-core:active .signal-core-face {
+  transform: translateY(2px);
+}
+.signal-stage[data-state='on'] .signal-core-rim {
+  background: linear-gradient(
+    150deg,
+    #b5d4d0,
+    #3b6667 32%,
+    #1c2829 60%,
+    #668176
+  );
+  box-shadow:
+    0 18px 26px #14232426,
+    0 4px 6px #14232424,
+    0 0 38px -15px #1fe1e760;
+}
+.signal-stage[data-state='on'] .signal-core img {
+  opacity: 1;
+  filter: invert(1) brightness(0.98) contrast(0.98);
+}
+.signal-stage[data-state='on'] .signal-power-icon {
+  color: var(--signal-cyan);
+  filter: drop-shadow(0 0 5px #1fe1e78c);
+}
+.signal-motion {
+  position: absolute;
+  z-index: 4;
+  bottom: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d9dfdc;
+  border-radius: 50%;
+  background: #fafaf8c7;
+  color: #586661;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.signal-motion[hidden] {
+  display: none;
+}
+.signal-motion:hover {
+  color: #151e1b;
+  background: #edf1ee;
+}
+.signal-motion:focus-visible {
+  outline: 2px solid var(--signal-cyan);
+  outline-offset: 3px;
+}
+.signal-motion svg {
+  width: 17px;
+  height: 17px;
+}
+.signal-play-icon {
+  display: none;
+}
+.signal-motion[aria-pressed='true'] .signal-pause-icon {
+  display: none;
+}
+.signal-motion[aria-pressed='true'] .signal-play-icon {
+  display: block;
+}
+.signal-nojs {
+  position: absolute;
+  bottom: 20px;
+  inset-inline: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #586661;
+}
+@media (max-width: 640px) {
+  .hero-stage.signal-stage {
+    aspect-ratio: 620/710;
+    border-radius: 0;
+    --core-size: 76px;
+  }
+  .signal-motion {
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-stage *,
+  .signal-stage::before,
+  .signal-stage::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+@media print {
+  .hero-stage.signal-stage {
+    break-inside: avoid;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .signal-motion {
+    display: none !important;
+  }
+}

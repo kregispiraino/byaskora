@@ -1,0 +1,111 @@
+/* ByAskora v1.2 / interactive dotted field.
+   Decorative only: no change to the approved typography, spacing or layout. */
+.hero {
+  isolation: isolate;
+}
+.hero-stage {
+  z-index: 1;
+}
+.hero-dots {
+  --dot-gap: 26px;
+  position: absolute;
+  z-index: 0;
+  inset: -110px 0 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  contain: strict;
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    #000 12%,
+    #000 55%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    #000 12%,
+    #000 55%,
+    transparent 100%
+  );
+}
+/* A CSS-only texture remains available without JavaScript, Canvas or a mouse. */
+.hero-dots::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(49, 63, 77, 0.31) 1px,
+    transparent 1.3px
+  );
+  background-size: var(--dot-gap) var(--dot-gap);
+  background-position: center top;
+}
+.hero-dots.is-enhanced::before {
+  opacity: 0;
+}
+.hero-dots canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.hero-dots.is-enhanced canvas {
+  opacity: 1;
+}
+/* An elliptical veil keeps the text quieter than the outer field.
+   Its edges are soft; there is no rectangle behind the heading. */
+.hero-dots::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 355px 210px at 50% 276px,
+    rgba(250, 250, 248, 0.94) 0%,
+    rgba(250, 250, 248, 0.81) 46%,
+    rgba(250, 250, 248, 0.22) 76%,
+    rgba(250, 250, 248, 0) 100%
+  );
+}
+@media (max-width: 800px) {
+  .hero-dots::after {
+    background: radial-gradient(
+      ellipse 300px 205px at 50% 250px,
+      rgba(250, 250, 248, 0.93) 0%,
+      rgba(250, 250, 248, 0.7) 48%,
+      rgba(250, 250, 248, 0) 100%
+    );
+  }
+}
+@media (max-width: 540px) {
+  .hero-dots {
+    inset-block-start: -97px;
+    --dot-gap: 24px;
+  }
+  .hero-dots::after {
+    background: radial-gradient(
+      ellipse 190px 185px at 50% 242px,
+      rgba(250, 250, 248, 0.91) 0%,
+      rgba(250, 250, 248, 0.75) 48%,
+      rgba(250, 250, 248, 0) 100%
+    );
+  }
+}
+@media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
+  .hero-dots.is-enhanced::before {
+    opacity: 1;
+  }
+  .hero-dots canvas {
+    display: none;
+  }
+}
+@media (forced-colors: active), print {
+  .hero-dots {
+    display: none !important;
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "version": "1.6",
+  "method": "Static checks and Chromium rendering from in-memory HTML with embedded local assets. No external requests or publication.",
+  "passed": 103,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "IDs unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Single H1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Institutional focuses on ByAskora",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Institutional contact has dialog semantics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preview remains noindex",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #conteudo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #como-trabalhamos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #continuidade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local anchor #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/css/landing.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local resource assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/images/preview-social.jpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/01-hero.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/02-solutions.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/04-process.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/06-continuity.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/07-faq.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/sections/08-contact.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/shared/dialogs.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/shared/footer.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/shared/header.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/shared/icons.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved src/site.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved tools/build.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "JS syntax config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "JS syntax signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "JS syntax main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "JS syntax hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: no page overflow",
+      "passed": true,
+      "detail": 1440
+    },
+    {
+      "check": "1440: exact process background match",
+      "passed": true,
+      "detail": "rgb(20, 23, 24)"
+    },
+    {
+      "check": "1440: section content fits",
+      "passed": true,
+      "detail": [
+        {
+          "id": "institucional",
+          "left": 160,
+          "right": 1280,
+          "width": 1120,
+          "scroll": 1120
+        },
+        {
+          "id": "continuidade",
+          "left": 0,
+          "right": 1440,
+          "width": 1440,
+          "scroll": 1440
+        }
+      ]
+    },
+    {
+      "check": "1440: institutional CTA opens form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: Escape closes form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: focus returns to CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: no page overflow",
+      "passed": true,
+      "detail": 768
+    },
+    {
+      "check": "768: exact process background match",
+      "passed": true,
+      "detail": "rgb(20, 23, 24)"
+    },
+    {
+      "check": "768: section content fits",
+      "passed": true,
+      "detail": [
+        {
+          "id": "institucional",
+          "left": 32,
+          "right": 736,
+          "width": 704,
+          "scroll": 704
+        },
+        {
+          "id": "continuidade",
+          "left": 0,
+          "right": 768,
+          "width": 768,
+          "scroll": 768
+        }
+      ]
+    },
+    {
+      "check": "768: institutional CTA opens form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: Escape closes form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: focus returns to CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: no page overflow",
+      "passed": true,
+      "detail": 390
+    },
+    {
+      "check": "390: exact process background match",
+      "passed": true,
+      "detail": "rgb(20, 23, 24)"
+    },
+    {
+      "check": "390: section content fits",
+      "passed": true,
+      "detail": [
+        {
+          "id": "institucional",
+          "left": 20,
+          "right": 370,
+          "width": 350,
+          "scroll": 350
+        },
+        {
+          "id": "continuidade",
+          "left": 0,
+          "right": 390,
+          "width": 390,
+          "scroll": 390
+        }
+      ]
+    },
+    {
+      "check": "390: institutional CTA opens form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: Escape closes form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: focus returns to CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: no page overflow",
+      "passed": true,
+      "detail": 320
+    },
+    {
+      "check": "320: exact process background match",
+      "passed": true,
+      "detail": "rgb(20, 23, 24)"
+    },
+    {
+      "check": "320: section content fits",
+      "passed": true,
+      "detail": [
+        {
+          "id": "institucional",
+          "left": 20,
+          "right": 300,
+          "width": 280,
+          "scroll": 280
+        },
+        {
+          "id": "continuidade",
+          "left": 0,
+          "right": 320,
+          "width": 320,
+          "scroll": 320
+        }
+      ]
+    },
+    {
+      "check": "320: institutional CTA opens form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: Escape closes form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: focus returns to CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: no page overflow",
+      "passed": true,
+      "detail": 1920
+    },
+    {
+      "check": "1920: exact process background match",
+      "passed": true,
+      "detail": "rgb(20, 23, 24)"
+    },
+    {
+      "check": "1920: section content fits",
+      "passed": true,
+      "detail": [
+        {
+          "id": "institucional",
+          "left": 400,
+          "right": 1520,
+          "width": 1120,
+          "scroll": 1120
+        },
+        {
+          "id": "continuidade",
+          "left": 0,
+          "right": 1920,
+          "width": 1920,
+          "scroll": 1920
+        }
+      ]
+    },
+    {
+      "check": "1920: institutional CTA opens form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: Escape closes form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: focus returns to CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Circuit still switches on",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Circuit still switches off",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Print restores dark text on white",
+      "passed": true,
+      "detail": {
+        "bg": "rgb(255, 255, 255)",
+        "copy": "rgb(51, 51, 51)",
+        "note": "rgb(51, 51, 51)"
+      }
+    },
+    {
+      "check": "No runtime JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

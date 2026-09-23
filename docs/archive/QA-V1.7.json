@@ -1,0 +1,698 @@
+{
+  "version": "1.7",
+  "method": "Checagem estática e Chromium com HTML e recursos incorporados em memória; sem navegação externa, sem alteração das políticas do navegador.",
+  "passed": 110,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "IDs únicos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "H1 único",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Relação de marca usa o masculino",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Sem referências femininas à marca",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Legenda original acima da marca",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Assinatura inferior original",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #conteudo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #como-trabalhamos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #continuidade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/css/landing.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/site.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado tools/build.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/images/preview-social.jpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/shared/header.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/shared/icons.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/shared/footer.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/shared/dialogs.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/01-hero.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/07-faq.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/06-continuity.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/04-process.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/02-solutions.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado src/sections/08-contact.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: sem overflow",
+      "passed": true,
+      "detail": {
+        "pageOverflow": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "shadow": "none",
+        "radius": "0px",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "1px"
+        ],
+        "emblem": [
+          160,
+          271.46875,
+          579.015625,
+          591.46875
+        ],
+        "text": [
+          677.015625,
+          235.859375,
+          1280,
+          627.078125
+        ],
+        "sectionOverflow": false,
+        "processBackground": "rgb(20, 23, 24)",
+        "maintenanceBackground": "rgb(20, 23, 24)",
+        "cyan": "rgb(31, 225, 231)"
+      }
+    },
+    {
+      "check": "1440: marca sem caixa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: ciano preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: fundo de manutenção preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: marca e texto sem sobreposição",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: formulário abre",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: formulário fecha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440: foco devolvido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: sem overflow",
+      "passed": true,
+      "detail": {
+        "pageOverflow": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "shadow": "none",
+        "radius": "0px",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "1px"
+        ],
+        "emblem": [
+          32,
+          258.140625,
+          282.125,
+          548.140625
+        ],
+        "text": [
+          319.125,
+          211.5,
+          736,
+          594.796875
+        ],
+        "sectionOverflow": false,
+        "processBackground": "rgb(20, 23, 24)",
+        "maintenanceBackground": "rgb(20, 23, 24)",
+        "cyan": "rgb(31, 225, 231)"
+      }
+    },
+    {
+      "check": "768: marca sem caixa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: ciano preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: fundo de manutenção preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: marca e texto sem sobreposição",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: formulário abre",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: formulário fecha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768: foco devolvido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: sem overflow",
+      "passed": true,
+      "detail": {
+        "pageOverflow": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "shadow": "none",
+        "radius": "0px",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "emblem": [
+          20,
+          199.140625,
+          370,
+          443.71875
+        ],
+        "text": [
+          20,
+          473.71875,
+          370,
+          967.890625
+        ],
+        "sectionOverflow": false,
+        "processBackground": "rgb(20, 23, 24)",
+        "maintenanceBackground": "rgb(20, 23, 24)",
+        "cyan": "rgb(31, 225, 231)"
+      }
+    },
+    {
+      "check": "390: marca sem caixa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: ciano preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: fundo de manutenção preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: marca e texto sem sobreposição",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: formulário abre",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: formulário fecha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390: foco devolvido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: sem overflow",
+      "passed": true,
+      "detail": {
+        "pageOverflow": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "shadow": "none",
+        "radius": "0px",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "emblem": [
+          20,
+          198.625,
+          300,
+          443.203125
+        ],
+        "text": [
+          20,
+          473.203125,
+          300,
+          1083.171875
+        ],
+        "sectionOverflow": false,
+        "processBackground": "rgb(20, 23, 24)",
+        "maintenanceBackground": "rgb(20, 23, 24)",
+        "cyan": "rgb(31, 225, 231)"
+      }
+    },
+    {
+      "check": "320: marca sem caixa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: ciano preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: fundo de manutenção preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: marca e texto sem sobreposição",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: formulário abre",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: formulário fecha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320: foco devolvido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: sem overflow",
+      "passed": true,
+      "detail": {
+        "pageOverflow": false,
+        "background": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "shadow": "none",
+        "radius": "0px",
+        "borders": [
+          "0px",
+          "0px",
+          "0px",
+          "1px"
+        ],
+        "emblem": [
+          400,
+          271.46875,
+          819.015625,
+          591.46875
+        ],
+        "text": [
+          917.015625,
+          235.859375,
+          1520,
+          627.078125
+        ],
+        "sectionOverflow": false,
+        "processBackground": "rgb(20, 23, 24)",
+        "maintenanceBackground": "rgb(20, 23, 24)",
+        "cyan": "rgb(31, 225, 231)"
+      }
+    },
+    {
+      "check": "1920: marca sem caixa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: ciano preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: fundo de manutenção preservado",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: marca e texto sem sobreposição",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: formulário abre",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: formulário fecha",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920: foco devolvido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Circuito liga",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Circuito desliga",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Sem erros JavaScript",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "Sem solicitações externas",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

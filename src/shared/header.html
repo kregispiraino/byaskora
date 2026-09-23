@@ -1,0 +1,45 @@
+<!-- The same Askora header component; project navigation intentionally removed. -->
+<a class="brand page-brand" href="#inicio" aria-label="ByAskora, início"
+  ><img
+    src="/assets/images/askora-mark-black.webp"
+    alt=""
+    width="30"
+    height="43"
+  /><span role="img" aria-label="ByAskora"
+    ><span class="brand-by">by</span>askora</span
+  ></a
+>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <button
+      class="mobile-menu-toggle"
+      type="button"
+      aria-controls="main-navigation"
+      aria-expanded="false"
+    >
+      <span>Menu</span><span class="menu-lines" aria-hidden="true"></span>
+    </button>
+    <nav class="nav-card" id="main-navigation" aria-label="Navegação principal">
+      <div class="nav-pages">
+        <a href="#institucional">Institucional</a
+        ><a
+          href="{{askora}}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Askora, abre em nova aba"
+          >Askora {{icon:arrow-up}}</a
+        >
+      </div>
+      <div class="nav-actions">
+        <a
+          class="nav-contact"
+          href="mailto:{{email}}"
+          data-open-project
+          aria-haspopup="dialog"
+          aria-controls="project-dialog"
+          >Contato {{icon:arrow-up}}</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>

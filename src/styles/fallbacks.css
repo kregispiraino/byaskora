@@ -1,0 +1,59 @@
+html:not(.enhancing):not(.dialogs-ready) .privacy-trigger {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  html:not(.enhancing):not(.navigation-ready) .mobile-menu-toggle {
+    display: none !important;
+  }
+  html:not(.enhancing):not(.navigation-ready) .site-header {
+    position: relative;
+    inset: auto;
+    margin-top: 88px;
+  }
+  html:not(.enhancing):not(.navigation-ready) .header-inner {
+    width: calc(100% - 40px);
+  }
+  html:not(.enhancing):not(.navigation-ready) .nav-card {
+    display: flex;
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    padding: 6px;
+    gap: 6px;
+    max-height: none;
+    overflow: visible;
+  }
+  html:not(.enhancing):not(.navigation-ready) .nav-pages {
+    flex-direction: row;
+    gap: 0;
+  }
+  html:not(.enhancing):not(.navigation-ready) .nav-pages > a {
+    font-size: 10px;
+    padding: 0 7px;
+    min-height: 36px;
+  }
+  html:not(.enhancing):not(.navigation-ready) .nav-actions {
+    border: 0;
+    padding: 0;
+    flex: 1;
+  }
+  html:not(.enhancing):not(.navigation-ready) .nav-actions > a {
+    min-height: 36px;
+    font-size: 10px;
+    padding: 0 9px;
+  }
+  html:not(.enhancing):not(.navigation-ready) main {
+    padding-top: 16px;
+  }
+}
+
+html:not(.enhancing):not(.tabs-ready) .solution-panel[hidden] {
+  display: block !important;
+  margin-top: 36px;
+}
+html:not(.enhancing):not(.tabs-ready) .solution-selector {
+  display: none;
+}
+html:not(.enhancing):not(.tabs-ready) .solutions-layout {
+  grid-template-columns: 1fr;
+}

@@ -1,0 +1,952 @@
+{
+  "version": "1.9",
+  "method": "Chromium, HTML e recursos locais incorporados em memória. Não é validação de ambiente publicado ou de abertura file:// neste ambiente.",
+  "passed": 157,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Preservado: src/site.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/css/landing.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/images/preview-social.jpg",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/shared/footer.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/shared/header.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/shared/dialogs.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/shared/icons.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/07-faq.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/04-process.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/06-continuity.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/02-solutions.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/05-institutional.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/08-contact.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preservado: src/sections/01-hero.html",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "IDs únicos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "H1 único",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/css/landing.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #conteudo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-graph",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-flow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-flow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-window",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-window",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-link",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Recurso local assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-instagram",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-linkedin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-youtube",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-facebook",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-whatsapp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #como-trabalhamos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #continuidade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-close",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-copy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-close",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Âncora #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Ativação por teclado e transição completa",
+      "passed": true,
+      "detail": {
+        "frames": 91,
+        "clock": 3.132966666666663,
+        "progress": 1,
+        "target": 1,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "scheduled": true,
+        "frameCostMs": 2.400000000023283,
+        "routeCount": 6,
+        "fragmentCount": 96,
+        "burstCount": 0
+      }
+    },
+    {
+      "check": "Circulação contínua depois da transição",
+      "passed": true,
+      "detail": {
+        "frames": 112,
+        "clock": 3.8163666666666645,
+        "progress": 1,
+        "target": 1,
+        "paused": false,
+        "reduced": false,
+        "visible": true,
+        "scheduled": true,
+        "frameCostMs": 4.100000000005821,
+        "routeCount": 6,
+        "fragmentCount": 96,
+        "burstCount": 0
+      }
+    },
+    {
+      "check": "Clique no fundo adiciona pulso",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pausa interrompe o render loop",
+      "passed": true,
+      "detail": {
+        "frames": 118,
+        "clock": 3.9996666666666636,
+        "progress": 1,
+        "target": 1,
+        "paused": true,
+        "reduced": false,
+        "visible": true,
+        "scheduled": false,
+        "frameCostMs": 3.3999999999941792,
+        "routeCount": 6,
+        "fragmentCount": 96,
+        "burstCount": 1
+      }
+    },
+    {
+      "check": "Retomar restaura movimento",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Desligar restaura dispersão",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pausa automática fora da tela",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Voltar à cena restaura o render loop",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "CTA mantém formulário sob demanda",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Escape fecha formulário",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Aba de solução: tab-sistemas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Aba de solução: tab-dashboards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Aba de solução: tab-automacoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Aba de solução: tab-sites",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320px: cena sem fundo, borda, raio ou sombra",
+      "passed": true,
+      "detail": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "0px",
+        "radius": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "alpha": 0,
+        "overflow": false,
+        "debug": {
+          "frames": 2,
+          "clock": 0,
+          "progress": 0,
+          "target": 0,
+          "paused": true,
+          "reduced": true,
+          "visible": true,
+          "scheduled": false,
+          "frameCostMs": 20.89999999999418,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      }
+    },
+    {
+      "check": "320px: pseudoelementos sem camada preta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320px: canvas transparente",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320px: sem transbordamento horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320px: preferência de movimento respeitada",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "320px: ativação sem animação com movimento reduzido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390px: cena sem fundo, borda, raio ou sombra",
+      "passed": true,
+      "detail": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "0px",
+        "radius": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "alpha": 0,
+        "overflow": false,
+        "debug": {
+          "frames": 2,
+          "clock": 0,
+          "progress": 0,
+          "target": 0,
+          "paused": true,
+          "reduced": true,
+          "visible": true,
+          "scheduled": false,
+          "frameCostMs": 6.399999999965075,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      }
+    },
+    {
+      "check": "390px: pseudoelementos sem camada preta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390px: canvas transparente",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390px: sem transbordamento horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390px: preferência de movimento respeitada",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "390px: ativação sem animação com movimento reduzido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768px: cena sem fundo, borda, raio ou sombra",
+      "passed": true,
+      "detail": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "0px",
+        "radius": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "alpha": 0,
+        "overflow": false,
+        "debug": {
+          "frames": 2,
+          "clock": 0,
+          "progress": 0,
+          "target": 0,
+          "paused": true,
+          "reduced": true,
+          "visible": true,
+          "scheduled": false,
+          "frameCostMs": 5.2999999999883585,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      }
+    },
+    {
+      "check": "768px: pseudoelementos sem camada preta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768px: canvas transparente",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768px: sem transbordamento horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768px: preferência de movimento respeitada",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "768px: ativação sem animação com movimento reduzido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440px: cena sem fundo, borda, raio ou sombra",
+      "passed": true,
+      "detail": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "0px",
+        "radius": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "alpha": 0,
+        "overflow": false,
+        "debug": {
+          "frames": 2,
+          "clock": 0,
+          "progress": 0,
+          "target": 0,
+          "paused": true,
+          "reduced": true,
+          "visible": true,
+          "scheduled": false,
+          "frameCostMs": 5.7000000000116415,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      }
+    },
+    {
+      "check": "1440px: pseudoelementos sem camada preta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440px: canvas transparente",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440px: sem transbordamento horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440px: preferência de movimento respeitada",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1440px: ativação sem animação com movimento reduzido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920px: cena sem fundo, borda, raio ou sombra",
+      "passed": true,
+      "detail": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "image": "none",
+        "border": "0px",
+        "radius": "0px",
+        "shadow": "none",
+        "before": "none",
+        "after": "none",
+        "alpha": 0,
+        "overflow": false,
+        "debug": {
+          "frames": 2,
+          "clock": 0,
+          "progress": 0,
+          "target": 0,
+          "paused": true,
+          "reduced": true,
+          "visible": true,
+          "scheduled": false,
+          "frameCostMs": 4.900000000023283,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      }
+    },
+    {
+      "check": "1920px: pseudoelementos sem camada preta",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920px: canvas transparente",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920px: sem transbordamento horizontal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920px: preferência de movimento respeitada",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "1920px: ativação sem animação com movimento reduzido",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Sem erros JavaScript",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}

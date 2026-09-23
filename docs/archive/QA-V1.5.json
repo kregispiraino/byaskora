@@ -1,0 +1,1566 @@
+{
+  "version": "1.5",
+  "method": "Static inspection plus Chromium rendering from in-memory HTML with embedded local assets. No navigation policy changed. Instrumented URL navigation was blocked by the environment; production, direct file navigation, Safari and Firefox were not tested.",
+  "passed": 253,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "IDs are unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Single landing H1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No client names in public HTML",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No portfolio links or blocks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No decorative section labels",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Askora masculine throughout rendered text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No em dash in page text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Form lives inside modal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Closing has no visible form",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Closing has just one principal CTA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #conteudo",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-graph",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-flow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-flow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-grid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-check",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-window",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-window",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-link",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-plus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #inicio",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-instagram",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-linkedin",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-youtube",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-facebook",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-whatsapp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #institucional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #como-trabalhamos",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #continuidade",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #contato",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #solucoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-close",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-copy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-close",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Anchor resolves #i-arrow-up",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/favicon.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/css/tokens.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/css/landing.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/css/hero-dots.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/js/config.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/js/main.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/js/hero-dots.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Local asset assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved byte-for-byte: assets/js/signal-scene.js",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved byte-for-byte: assets/css/signal-scene.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved byte-for-byte: assets/images/askora-mark-black.webp",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Preserved byte-for-byte: assets/css/shared.css",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Circuit HTML subtree unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Dots use exact brand RGB",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Resting dots opacity raised",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All five Askora channels preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No font binaries in deliverable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Dialog initially closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Brand by is exact cyan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Continuous motion after transition",
+      "passed": true,
+      "detail": [
+        {
+          "frames": 215,
+          "clock": 3.633266666666662,
+          "progress": 1,
+          "target": 1,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "scheduled": true,
+          "frameCostMs": 1.599999999976717,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        },
+        {
+          "frames": 243,
+          "clock": 4.0999666666666625,
+          "progress": 1,
+          "target": 1,
+          "paused": false,
+          "reduced": false,
+          "visible": true,
+          "scheduled": true,
+          "frameCostMs": 1.2999999999301508,
+          "routeCount": 6,
+          "fragmentCount": 96,
+          "burstCount": 0
+        }
+      ]
+    },
+    {
+      "check": "Six connected routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Extra pulse on circuit background",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pause stops rendering",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Switch disconnects while paused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No horizontal page overflow at 320",
+      "passed": true,
+      "detail": [
+        320,
+        320
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 320",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 320",
+      "passed": true,
+      "detail": {
+        "w": 278,
+        "sw": 278,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service dashboards at 320",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 320",
+      "passed": true,
+      "detail": {
+        "w": 278,
+        "sw": 278,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service automacoes at 320",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 320",
+      "passed": true,
+      "detail": {
+        "w": 278,
+        "sw": 278,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service sites at 320",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 320",
+      "passed": true,
+      "detail": {
+        "w": 278,
+        "sw": 278,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Modal within viewport 320",
+      "passed": true,
+      "detail": {
+        "r": 303,
+        "l": 17,
+        "w": 284,
+        "sw": 284,
+        "h": 778.375,
+        "vh": 900
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 360",
+      "passed": true,
+      "detail": [
+        360,
+        360
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 360",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 360",
+      "passed": true,
+      "detail": {
+        "w": 318,
+        "sw": 318,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service dashboards at 360",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 360",
+      "passed": true,
+      "detail": {
+        "w": 318,
+        "sw": 318,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service automacoes at 360",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 360",
+      "passed": true,
+      "detail": {
+        "w": 318,
+        "sw": 318,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service sites at 360",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 360",
+      "passed": true,
+      "detail": {
+        "w": 318,
+        "sw": 318,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 390",
+      "passed": true,
+      "detail": [
+        390,
+        390
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 390",
+      "passed": true,
+      "detail": {
+        "w": 348,
+        "sw": 348,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service dashboards at 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 390",
+      "passed": true,
+      "detail": {
+        "w": 348,
+        "sw": 348,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service automacoes at 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 390",
+      "passed": true,
+      "detail": {
+        "w": 348,
+        "sw": 348,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service sites at 390",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 390",
+      "passed": true,
+      "detail": {
+        "w": 348,
+        "sw": 348,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Modal within viewport 390",
+      "passed": true,
+      "detail": {
+        "r": 373,
+        "l": 17,
+        "w": 354,
+        "sw": 354,
+        "h": 688.484375,
+        "vh": 900
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 540",
+      "passed": true,
+      "detail": [
+        540,
+        540
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 540",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 540",
+      "passed": true,
+      "detail": {
+        "w": 498,
+        "sw": 498,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service dashboards at 540",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 540",
+      "passed": true,
+      "detail": {
+        "w": 498,
+        "sw": 498,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service automacoes at 540",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 540",
+      "passed": true,
+      "detail": {
+        "w": 498,
+        "sw": 498,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "Visible service sites at 540",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 540",
+      "passed": true,
+      "detail": {
+        "w": 498,
+        "sw": 498,
+        "h": 250,
+        "sh": 250
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 640",
+      "passed": true,
+      "detail": [
+        640,
+        640
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 640",
+      "passed": true,
+      "detail": {
+        "w": 598,
+        "sw": 598,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 640",
+      "passed": true,
+      "detail": {
+        "w": 598,
+        "sw": 598,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 640",
+      "passed": true,
+      "detail": {
+        "w": 598,
+        "sw": 598,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 640",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 640",
+      "passed": true,
+      "detail": {
+        "w": 598,
+        "sw": 598,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 768",
+      "passed": true,
+      "detail": [
+        768,
+        768
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 768",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 768",
+      "passed": true,
+      "detail": {
+        "w": 702,
+        "sw": 702,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 768",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 768",
+      "passed": true,
+      "detail": {
+        "w": 702,
+        "sw": 702,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 768",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 768",
+      "passed": true,
+      "detail": {
+        "w": 702,
+        "sw": 702,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 768",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 768",
+      "passed": true,
+      "detail": {
+        "w": 702,
+        "sw": 702,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Modal within viewport 768",
+      "passed": true,
+      "detail": {
+        "r": 674,
+        "l": 94,
+        "w": 578,
+        "sw": 578,
+        "h": 648.15625,
+        "vh": 900
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 900",
+      "passed": true,
+      "detail": [
+        900,
+        900
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 900",
+      "passed": true,
+      "detail": {
+        "w": 473,
+        "sw": 473,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 900",
+      "passed": true,
+      "detail": {
+        "w": 473,
+        "sw": 473,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 900",
+      "passed": true,
+      "detail": {
+        "w": 473,
+        "sw": 473,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 900",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 900",
+      "passed": true,
+      "detail": {
+        "w": 473,
+        "sw": 473,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 1024",
+      "passed": true,
+      "detail": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 1024",
+      "passed": true,
+      "detail": {
+        "w": 548,
+        "sw": 548,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 1024",
+      "passed": true,
+      "detail": {
+        "w": 548,
+        "sw": 548,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 1024",
+      "passed": true,
+      "detail": {
+        "w": 548,
+        "sw": 548,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 1024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 1024",
+      "passed": true,
+      "detail": {
+        "w": 548,
+        "sw": 548,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 1440",
+      "passed": true,
+      "detail": [
+        1440,
+        1440
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 1440",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 1440",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 1440",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 1440",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 1440",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Modal within viewport 1440",
+      "passed": true,
+      "detail": {
+        "r": 1010,
+        "l": 430,
+        "w": 578,
+        "sw": 578,
+        "h": 648.15625,
+        "vh": 900
+      }
+    },
+    {
+      "check": "No horizontal page overflow at 1920",
+      "passed": true,
+      "detail": [
+        1920,
+        1920
+      ]
+    },
+    {
+      "check": "Visible service sistemas at 1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sistemas 1920",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service dashboards at 1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained dashboards 1920",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service automacoes at 1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained automacoes 1920",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Visible service sites at 1920",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service preview contained sites 1920",
+      "passed": true,
+      "detail": {
+        "w": 627,
+        "sw": 627,
+        "h": 280,
+        "sh": 280
+      }
+    },
+    {
+      "check": "Service tabs keyboard selection",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service tabs End",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Service prefilled without extra field",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Only three required fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "First validation error focused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Review appears in same modal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Optional company accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Form disappears on review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Mailto includes authored message",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No automatic form submission",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "Clipboard or explicit selection fallback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Back preserves input",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "User input remains inert text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Escape closes and unlocks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "FAQ expands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Footer service link sistemas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Footer service link dashboards",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Footer service link automacoes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Footer service link sites",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Close restores CTA focus",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Backdrop closes modal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Privacy opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Mobile menu opens",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Menu contact opens modal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Mobile focus returns to menu button",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 9",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Focus trapped in dialog 12",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reduced motion stops circuit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reduced motion switch still works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Reduced motion dots static",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No runtime exceptions",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "Touch decoration is static",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Touch enables circuit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No touch overflow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "No storage usage",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "protected_sha256": {
+    "assets/js/signal-scene.js": "fbd06792959ace02872c2abe13f4c0eb2bb130bc6690283275a9097116cfd744",
+    "assets/css/signal-scene.css": "e2db266bda0305a39fd4bf7752b4556c9d8161aa4709eeb790f778b532e93aca",
+    "assets/images/askora-mark-black.webp": "a700797d196177e35d41000d5adec187571557844054909131f593dfb4dec746",
+    "assets/css/shared.css": "07a06fa09728fbc51222281e9dc8b76fd33aa95ee37bb40714213556a25170bb"
+  }
+}

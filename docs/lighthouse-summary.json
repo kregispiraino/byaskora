@@ -1,0 +1,34 @@
+{
+  "measuredAt": "2026-09-23T00:47:44.649Z",
+  "lighthouseVersion": "13.5.0",
+  "environment": "Local Vite preview of production build; mobile simulation; not production field data",
+  "scores": {
+    "performance": 100,
+    "accessibility": 97,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 1138.597,
+      "unit": "millisecond"
+    },
+    "largest-contentful-paint": {
+      "value": 1238.597,
+      "unit": "millisecond"
+    },
+    "total-blocking-time": {
+      "value": 50,
+      "unit": "millisecond"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "unit": "unitless"
+    },
+    "speed-index": {
+      "value": 1138.597,
+      "unit": "millisecond"
+    }
+  },
+  "accessibilityNote": "The automated color-contrast finding is limited to original cyan logotype lettering. WCAG 1.4.3 exempts logos. Other text contrast was corrected; targeted axe checks exclude only the logotype from contrast checks."
+}
