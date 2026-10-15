@@ -636,6 +636,15 @@ h2 {
     font-size: 12px;
   }
 }
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero-actions .button {
+    width: min(280px, 100%);
+  }
+}
 @media (max-width: 540px) {
   main {
     padding-top: 97px;
@@ -653,14 +662,11 @@ h2 {
     line-height: 1.8;
     margin: 21px auto 22px;
   }
-  .hero-actions {
-    gap: 8px;
-  }
   .hero-actions .button {
     min-height: 44px;
-    padding-inline: 12px;
-    font-size: 10px;
-    gap: 10px;
+    padding-inline: 14px;
+    font-size: 11px;
+    gap: 12px;
   }
   .hero-actions .button .icon {
     width: 14px;
@@ -764,16 +770,6 @@ h2 {
   }
 }
 @media (max-width: 389px) {
-  .hero-actions {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .hero-actions .button {
-    width: min(280px, 100%);
-    font-size: 11px;
-    padding-inline: 14px;
-    gap: 12px;
-  }
   .closing-content h2 {
     font-size: 31px;
   }

@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
-test('character follows the pointer smoothly, pauses, and rests offscreen', async ({
+test('character follows the pointer, honors motion preferences and rests offscreen', async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
@@ -44,23 +44,14 @@ test('character follows the pointer smoothly, pauses, and rests offscreen', asyn
   );
   expect(first).toBeGreaterThan(0);
   await expect.poll(async () => (await offset(page)).x).toBeLessThan(-12);
-  await page
-    .getByRole('button', {
-      name: 'Pausar movimento do personagem',
-      exact: true,
-    })
-    .click();
+  await expect(page.locator('[data-mascot-motion]')).toHaveCount(0);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(stage).toHaveAttribute('data-paused', 'true');
   const paused = await head.getAttribute('transform');
   await page.mouse.move(width - 10, 100);
   await page.waitForTimeout(250);
   expect(await head.getAttribute('transform')).toBe(paused);
-  await page
-    .getByRole('button', {
-      name: 'Retomar movimento do personagem',
-      exact: true,
-    })
-    .click();
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
   await expect.poll(() => head.getAttribute('transform')).not.toBe(paused);
   await page.locator('.site-footer').scrollIntoViewIfNeeded();
   await expect(stage).not.toBeInViewport();
@@ -80,7 +71,7 @@ test('reduced motion keeps the character still and the circuit stays on restruct
     'data-paused',
     'true',
   );
-  await expect(page.locator('[data-mascot-motion]')).toBeHidden();
+  await expect(page.locator('[data-mascot-motion]')).toHaveCount(0);
   const still = await head.getAttribute('transform');
   await page.mouse.move(20, 100);
   await page.waitForTimeout(150);

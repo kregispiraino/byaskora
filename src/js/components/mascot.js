@@ -6,23 +6,19 @@ export function initMascot() {
   const gaze = host.querySelector('[data-mascot-gaze]');
   const eyelids = host.querySelector('[data-mascot-eyelids]');
   const shadow = host.querySelector('[data-mascot-shadow]');
-  const motion = host.querySelector('[data-mascot-motion]');
-  const motionIcon = host.querySelector('[data-mascot-motion-icon]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const target = { x: 0, y: 0 };
   const look = { x: 0, y: 0 };
   const pose = { x: 0, y: 0 };
   let rect = host.getBoundingClientRect();
   let visible = false;
-  let paused = false;
   let frame = 0;
   let previous = 0;
   let elapsed = 0;
   let blinkAt = 3.4;
   let touchRelease;
   const clamp = (value) => Math.max(-1, Math.min(1, value));
-  const active = () =>
-    visible && !paused && !reduced.matches && !document.hidden;
+  const active = () => visible && !reduced.matches && !document.hidden;
 
   function paint(blink = 1) {
     const float = Math.sin(elapsed * 1.25) * 2;
@@ -89,19 +85,7 @@ export function initMascot() {
   }
   function sync() {
     stop();
-    motion.hidden = reduced.matches;
-    motion.setAttribute('aria-pressed', String(paused));
-    motion.setAttribute(
-      'aria-label',
-      paused
-        ? 'Retomar movimento do personagem'
-        : 'Pausar movimento do personagem',
-    );
-    motionIcon.setAttribute(
-      'd',
-      paused ? 'm9 6 9 6-9 6V6Z' : 'M9 6v12M15 6v12',
-    );
-    host.dataset.paused = String(paused || reduced.matches);
+    host.dataset.paused = String(reduced.matches);
     if (reduced.matches) {
       neutral();
       look.x = look.y = pose.x = pose.y = elapsed = 0;
@@ -109,15 +93,10 @@ export function initMascot() {
     }
     wake();
   }
-  motion.addEventListener('click', () => {
-    paused = !paused;
-    sync();
-  });
   window.addEventListener('pointermove', follow, { passive: true });
   host.addEventListener(
     'pointerdown',
     (event) => {
-      if (event.target.closest('button')) return;
       clearTimeout(touchRelease);
       follow(event);
       if (active()) blinkAt = elapsed + 0.12;
