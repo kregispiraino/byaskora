@@ -1,29 +1,20 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-entry-address="{{entryAddress}}">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#fafaf8" />
     <meta name="robots" content="{{robots}}" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>ByAskora | Desenvolvimento web para o seu negócio</title>
-    <meta
-      name="description"
-      content="Sistemas web, dashboards, automações e sites para a sua empresa. Projetos sob medida, com desenvolvimento e manutenção definidos em proposta."
-    />
-    <link rel="canonical" href="{{url}}" />
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{pageDescription}}" />
+    <link rel="canonical" href="{{pageUrl}}" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="{{brand}}" />
-    <meta property="og:url" content="{{url}}" />
-    <meta
-      property="og:title"
-      content="ByAskora | O seu negócio vem antes do código."
-    />
-    <meta
-      property="og:description"
-      content="Sistemas, dashboards, automações e sites para a sua empresa."
-    />
+    <meta property="og:url" content="{{pageUrl}}" />
+    <meta property="og:title" content="{{pageTitle}}" />
+    <meta property="og:description" content="{{pageDescription}}" />
     <meta
       property="og:image"
       content="{{url}}assets/images/preview-social.jpg"
@@ -35,14 +26,8 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="ByAskora | O seu negócio vem antes do código."
-    />
-    <meta
-      name="twitter:description"
-      content="Sistemas, dashboards, automações e sites para a sua empresa."
-    />
+    <meta name="twitter:title" content="{{pageTitle}}" />
+    <meta name="twitter:description" content="{{pageDescription}}" />
     <meta
       name="twitter:image"
       content="{{url}}assets/images/preview-social.jpg"
@@ -54,10 +39,11 @@
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
     <!-- structured-data -->
     <!-- bootstrap -->
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/pages/{{pageEntry}}.js"></script>
   </head>
-  <body id="inicio">
+  <body id="inicio" data-page="{{pageSlug}}" data-interest="{{pageInterest}}">
     <!-- include:icons -->
+    <!-- include:entrySearch -->
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <!-- include:header -->
     <main id="conteudo" tabindex="-1">

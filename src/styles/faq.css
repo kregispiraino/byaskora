@@ -1,0 +1,47 @@
+/* One full-width surface joins the FAQ to the shared CTA on every page. */
+.faq-section {
+  background: var(--closing-paper);
+}
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 100px;
+}
+.faq-intro .eyebrow {
+  margin-bottom: 20px;
+}
+.faq-intro h2 {
+  font-size: 36px;
+}
+.faq-intro .section-intro {
+  margin-top: 22px;
+  max-width: 340px;
+}
+.faq-answer p + p {
+  margin-top: 12px;
+}
+@media (max-width: 1100px) {
+  .faq-layout {
+    gap: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .faq-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+@media (max-width: 640px) {
+  .faq-section.section-space {
+    padding-block: 56px;
+  }
+  .faq-intro h2 {
+    font-size: 30px;
+  }
+}
+@media print {
+  .faq-layout {
+    display: block;
+  }
+}

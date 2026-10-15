@@ -1,0 +1,21 @@
+{
+  "license": "https://www.pexels.com/license/",
+  "downloaded": "2026-10-15",
+  "photos": [
+    {
+      "file": "furniture.webp",
+      "photographer": "Bahram BP",
+      "source": "https://www.pexels.com/photo/cozy-modern-armchair-in-minimalist-living-room-29508374/"
+    },
+    {
+      "file": "food.webp",
+      "photographer": "Lisa Fotios",
+      "source": "https://www.pexels.com/photo/selective-focus-photography-of-pasta-with-tomato-and-basil-1279330/"
+    },
+    {
+      "file": "services.webp",
+      "photographer": "fauxels",
+      "source": "https://www.pexels.com/photo/photo-of-three-people-smiling-while-having-a-meeting-3184338/"
+    }
+  ]
+}

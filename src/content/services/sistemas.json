@@ -1,0 +1,143 @@
+{
+  "source": "byaskora-sistemas.html",
+  "slug": "sistemas",
+  "hero": {
+    "eyebrow": "Desenvolvimento de sistemas, dashboards e BI",
+    "title": "Controle da operação. Clareza para decidir.",
+    "description": "Sistemas e dashboards sob medida para organizar processos, conectar informações e acompanhar resultados. Do planejamento à implantação, junto com sua equipe.",
+    "cta": "Conversar sobre um sistema"
+  },
+  "sections": [
+    {
+      "id": "solucoes",
+      "kind": "delivery",
+      "title": "O que podemos organizar.",
+      "intro": "Da rotina da equipe aos números da gestão, uma solução para o que sua empresa precisa.",
+      "items": [
+        {
+          "icon": "window",
+          "title": "Sistemas para a operação",
+          "paragraphs": [
+            "Solicitações, aprovações e controles em uma aplicação web, com etapas, responsáveis e permissões definidos."
+          ]
+        },
+        {
+          "icon": "graph",
+          "title": "Dashboards e indicadores",
+          "paragraphs": [
+            "Metas, resultados e prazos em painéis com filtros e detalhamento para entender cada número."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "Integrações e automações",
+          "paragraphs": [
+            "Conexões entre planilhas, bases e ferramentas para reduzir lançamentos repetidos e manter as informações alinhadas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "como-funciona",
+      "kind": "process",
+      "title": "Da rotina ao sistema.",
+      "intro": "Sua equipe participa das decisões e valida cada entrega.",
+      "items": [
+        {
+          "title": "Mapeamos",
+          "paragraphs": [
+            "Entendemos os processos, as fontes de dados e o que precisa melhorar."
+          ]
+        },
+        {
+          "title": "Definimos",
+          "paragraphs": [
+            "Alinhamos telas, regras e indicadores, com escopo, investimento e prazo claros."
+          ]
+        },
+        {
+          "title": "Desenvolvemos",
+          "paragraphs": [
+            "Construímos e conferimos os fluxos e os cálculos com as referências da sua equipe."
+          ]
+        },
+        {
+          "title": "Implantamos",
+          "paragraphs": [
+            "Organizamos os acessos, orientamos a equipe e acompanhamos a entrada em uso."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contratacao",
+      "kind": "continuity",
+      "title": "Implantação e continuidade.",
+      "items": [
+        {
+          "icon": "flow",
+          "title": "O projeto",
+          "paragraphs": [
+            "Podemos começar por um processo ou painel. Integrações, migração e responsabilidades ficam definidas na proposta."
+          ]
+        },
+        {
+          "icon": "shield",
+          "title": "Depois da entrega",
+          "paragraphs": [
+            "Hospedagem, suporte e atualizações conforme a manutenção contratada. Novas funcionalidades são planejadas à parte."
+          ]
+        }
+      ],
+      "note": "Licenças e serviços de terceiros, quando necessários, têm seus custos identificados na proposta."
+    },
+    {
+      "id": "duvidas",
+      "kind": "faq",
+      "items": [
+        {
+          "title": "Quanto custa e quanto tempo leva?",
+          "paragraphs": [
+            "Depende dos processos, das integrações e da situação dos dados. A proposta apresenta escopo, investimento, cronograma e condições de manutenção antes de começar."
+          ]
+        },
+        {
+          "title": "Preciso trocar os sistemas que já uso?",
+          "paragraphs": [
+            "Nem sempre. Podemos complementar seu ERP, CRM ou planilhas, conforme os acessos e recursos de integração disponíveis. Avaliamos a viabilidade antes de propor a conexão."
+          ]
+        },
+        {
+          "title": "O dashboard pode ser feito em Power BI?",
+          "paragraphs": [
+            "Sim. Avaliamos Power BI ou um painel web próprio conforme as fontes de dados e quem precisa acessar. Licenças e infraestrutura entram na definição do projeto."
+          ]
+        },
+        {
+          "title": "Como vocês conferem os indicadores?",
+          "paragraphs": [
+            "Definimos as regras de cálculo com sua equipe e comparamos os resultados com as referências da empresa. Divergências nos dados ou nos cálculos são investigadas antes da aprovação."
+          ]
+        },
+        {
+          "title": "Os dados são atualizados em tempo real?",
+          "paragraphs": [
+            "A frequência depende das fontes e das integrações disponíveis. Combinamos a atualização por importação, intervalos ou eventos, com a referência visível no painel."
+          ]
+        },
+        {
+          "title": "Como ficam a segurança e os acessos?",
+          "paragraphs": [
+            "Perfis, permissões, backups e demais controles são definidos no escopo. O contrato esclarece propriedade do código, acesso e exportação dos dados e condições de transferência."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "id": "contato",
+    "eyebrow": "Vamos falar da sua operação",
+    "title": "Vamos conversar sobre seu sistema.",
+    "intro": "Conte o processo que quer organizar ou o indicador que precisa acompanhar."
+  }
+}

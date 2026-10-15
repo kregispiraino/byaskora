@@ -1,10 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import {
-  validateField,
-  prepareMessage,
-  createEmailLink,
-} from '../../src/js/contact-message.js';
+import { validateField } from '../../src/js/contact-validation.js';
 
 test('required, optional, whitespace and length boundaries', () => {
   assert.equal(validateField('name', '  ', 100), false);
@@ -17,20 +13,10 @@ test('required, optional, whitespace and length boundaries', () => {
   assert.equal(validateField('context', 'x'.repeat(3001), 3000), false);
   assert.equal(validateField('email', 'invalid', 200, true), false);
 });
-test('message preserves Unicode and encodes URL control characters as data', () => {
-  const data = {
-    name: 'João & Cia',
-    email: 'joao@example.com',
-    context: 'Integração? x=1 & y=2\nSegunda linha',
-    interest: 'Automação',
-  };
-  const message = prepareMessage(data);
-  assert.ok(!message.includes('Empresa:'));
-  assert.ok(message.includes(data.context));
-  const link = new URL(
-    createEmailLink('contato@askora.com.br', 'João\r\nBcc:foo', message),
-  );
-  assert.equal(link.searchParams.get('body'), message);
-  assert.ok(!link.searchParams.get('subject').includes('\n'));
-  assert.equal(link.searchParams.size, 2);
+test('optional phone accepts formatted numbers and enforces character and digit limits', () => {
+  assert.equal(validateField('phone', '', 30), true);
+  assert.equal(validateField('phone', '(11) 99999-9999', 30), true);
+  assert.equal(validateField('phone', '+55 11 99999-9999', 30), true);
+  for (const value of ['123', '1'.repeat(16), '11999999999abc', '1'.repeat(31)])
+    assert.equal(validateField('phone', value, 30), false);
 });

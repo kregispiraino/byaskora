@@ -1,0 +1,98 @@
+<div class="mascot-stage" data-mascot>
+  <div class="mascot-arrival">
+    <svg
+      class="mascot-portrait"
+      viewBox="0 0 640 400"
+      role="img"
+      aria-label="Personagem do ByAskora: uma figura preta arredondada, com dois olhos ciano."
+    >
+      <defs>
+        <radialGradient id="mascot-material" cx="32%" cy="14%" r="88%">
+          <stop stop-color="#292e31" />
+          <stop offset=".4" stop-color="#14181b" />
+          <stop offset=".78" stop-color="#0b0e10" />
+          <stop offset="1" stop-color="#060809" />
+        </radialGradient>
+        <linearGradient id="mascot-edge" x1="0" y1="0" x2=".7" y2="1">
+          <stop stop-color="#747e82" stop-opacity=".55" />
+          <stop offset=".45" stop-color="#31393d" stop-opacity=".3" />
+          <stop offset="1" stop-color="#000" stop-opacity=".8" />
+        </linearGradient>
+        <radialGradient id="mascot-shadow">
+          <stop stop-color="#182126" stop-opacity=".2" />
+          <stop offset=".55" stop-color="#182126" stop-opacity=".08" />
+          <stop offset="1" stop-color="#182126" stop-opacity="0" />
+        </radialGradient>
+        <linearGradient id="mascot-eye-light" x1="0" y1="0" x2="0" y2="1">
+          <stop stop-color="#8ef9ff" />
+          <stop offset=".4" stop-color="var(--accent)" />
+          <stop offset="1" stop-color="var(--accent-base)" />
+        </linearGradient>
+        <filter id="mascot-glow" x="-80%" y="-60%" width="260%" height="220%">
+          <feGaussianBlur stdDeviation="5" />
+        </filter>
+      </defs>
+      <ellipse
+        data-mascot-shadow
+        cx="320"
+        cy="366"
+        rx="132"
+        ry="16"
+        fill="url(#mascot-shadow)"
+      />
+      <g data-mascot-head>
+        <path
+          d="M320 45C413 45 472 119 472 217C472 306 420 346 320 346C220 346 168 306 168 217C168 119 227 45 320 45Z"
+          fill="url(#mascot-material)"
+          stroke="url(#mascot-edge)"
+          stroke-width="1.5"
+        />
+        <path
+          d="M203 132C223 85 264 57 311 56"
+          fill="none"
+          stroke="#fff"
+          stroke-opacity=".07"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <g data-mascot-gaze>
+          <g data-mascot-eyelids>
+            <g fill="var(--accent)" opacity=".25" filter="url(#mascot-glow)">
+              <rect x="276" y="146" width="25" height="58" rx="12.5" />
+              <rect x="339" y="146" width="25" height="58" rx="12.5" />
+            </g>
+            <g fill="url(#mascot-eye-light)">
+              <rect x="276" y="146" width="25" height="58" rx="12.5" />
+              <rect x="339" y="146" width="25" height="58" rx="12.5" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <button
+    class="mascot-motion"
+    data-mascot-motion
+    type="button"
+    aria-label="Pausar movimento do personagem"
+    aria-pressed="false"
+    hidden
+  >
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        data-mascot-motion-icon
+        d="M9 6v12M15 6v12"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>

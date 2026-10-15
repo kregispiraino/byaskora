@@ -1,0 +1,143 @@
+{
+  "source": "byaskora-apps.html",
+  "slug": "aplicativos",
+  "hero": {
+    "eyebrow": "Desenvolvimento de aplicativos para iOS e Android",
+    "title": "Seu negócio em um app. Simples para quem usa.",
+    "description": "Aplicativos sob medida para atender clientes, apoiar equipes e lançar produtos digitais. Da primeira ideia à publicação, com uma experiência simples de usar.",
+    "cta": "Conversar sobre um aplicativo"
+  },
+  "sections": [
+    {
+      "id": "aplicacoes",
+      "kind": "delivery",
+      "title": "O que seu aplicativo pode resolver.",
+      "intro": "Começamos por quem vai usar e pelo que precisa ficar mais fácil.",
+      "items": [
+        {
+          "icon": "phone",
+          "title": "Mais perto dos clientes",
+          "paragraphs": [
+            "Agendamentos, pedidos e acompanhamento de serviços em um canal próprio, com a identidade da sua marca."
+          ]
+        },
+        {
+          "icon": "flow",
+          "title": "A rotina da equipe",
+          "paragraphs": [
+            "Tarefas, visitas e aprovações no celular, conectadas à operação e aos acessos de cada pessoa."
+          ]
+        },
+        {
+          "icon": "layers",
+          "title": "Seu produto digital",
+          "paragraphs": [
+            "Uma primeira versão com os recursos essenciais para colocar a ideia em uso e orientar os próximos passos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "como-funciona",
+      "kind": "process",
+      "title": "Da ideia ao aplicativo.",
+      "intro": "Você acompanha as entregas e valida cada etapa.",
+      "items": [
+        {
+          "title": "Definimos",
+          "paragraphs": [
+            "Alinhamos público, recursos, plataformas, investimento e prazo."
+          ]
+        },
+        {
+          "title": "Desenhamos",
+          "paragraphs": [
+            "Você experimenta o protótipo e aprova as telas antes do desenvolvimento."
+          ]
+        },
+        {
+          "title": "Desenvolvemos",
+          "paragraphs": [
+            "Construímos e testamos os fluxos e as integrações nos dispositivos previstos."
+          ]
+        },
+        {
+          "title": "Lançamos",
+          "paragraphs": [
+            "Preparamos o envio às lojas e acompanhamos a análise e a publicação."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contratacao",
+      "kind": "continuity",
+      "title": "Lançamento e continuidade.",
+      "items": [
+        {
+          "icon": "window",
+          "title": "O projeto",
+          "paragraphs": [
+            "Funcionalidades, integrações e painel administrativo, quando necessário, definidos na proposta."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "Depois da entrega",
+          "paragraphs": [
+            "Suporte e atualizações conforme a manutenção contratada. Novos recursos são planejados à parte."
+          ]
+        }
+      ],
+      "note": "Contas, taxas das lojas e infraestrutura ficam alinhadas na contratação. A aprovação do aplicativo depende da análise de cada loja."
+    },
+    {
+      "id": "duvidas",
+      "kind": "faq",
+      "items": [
+        {
+          "title": "Quanto custa e quanto tempo leva?",
+          "paragraphs": [
+            "Depende dos recursos, das plataformas e das integrações. A proposta define investimento, cronograma e manutenção; o prazo de aprovação nas lojas depende da análise delas."
+          ]
+        },
+        {
+          "title": "Funciona em iPhone e Android?",
+          "paragraphs": [
+            "Sim, desenvolvemos para iOS e Android. As plataformas, versões e dispositivos atendidos são definidos no projeto."
+          ]
+        },
+        {
+          "title": "Preciso ter a ideia toda definida?",
+          "paragraphs": [
+            "Não. Ajudamos a organizar as prioridades e a primeira versão. Se já existe um aplicativo, avaliamos o que pode ser aproveitado ou melhorado."
+          ]
+        },
+        {
+          "title": "Posso integrar e administrar o aplicativo?",
+          "paragraphs": [
+            "Podemos prever um painel web ou conectar o aplicativo ao seu sistema, conforme a viabilidade técnica. Recursos de gestão, integrações e perfis de acesso ficam definidos no escopo."
+          ]
+        },
+        {
+          "title": "Pode ter pagamentos, notificações e uso offline?",
+          "paragraphs": [
+            "Esses recursos são avaliados conforme a necessidade. Custos, regras de pagamento e sincronização sem internet precisam ser previstos no projeto."
+          ]
+        },
+        {
+          "title": "Como ficam a publicação e os acessos?",
+          "paragraphs": [
+            "Preparamos o envio e acompanhamos a análise das lojas. O contrato define titularidade das contas, código, acesso aos dados, taxas e condições de transferência."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "id": "contato",
+    "eyebrow": "Vamos falar do seu aplicativo",
+    "title": "Vamos conversar sobre seu aplicativo.",
+    "intro": "Conte a ideia e quem vai usar. Nós ajudamos a definir o próximo passo."
+  }
+}

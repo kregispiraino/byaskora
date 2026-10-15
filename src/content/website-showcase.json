@@ -1,0 +1,80 @@
+[
+  {
+    "id": "furniture",
+    "palette": "sage",
+    "name": "forma",
+    "domain": "forma.studio",
+    "category": "Mobiliário",
+    "nav": ["Coleção", "Atelier", "Contato"],
+    "eyebrow": "COLEÇÃO PERMANENTE — 2026",
+    "title": ["O essencial,", ""],
+    "accent": "bem desenhado.",
+    "description": [
+      "Móveis autorais, materiais honestos e um olhar atento ao jeito de morar."
+    ],
+    "cta": "Conheça a coleção",
+    "note": "Feito no Brasil. Pensado para durar.",
+    "artTitle": "01 — Espaços para viver",
+    "artSubtitle": "Texturas naturais",
+    "footer": "Design brasileiro, em cada detalhe.",
+    "tags": ["Peças autorais", "Sob encomenda"],
+    "image": {
+      "src": "/assets/images/showcase/furniture.webp",
+      "alt": "Poltrona clara de madeira em uma sala com luz natural.",
+      "width": 1000,
+      "height": 563
+    }
+  },
+  {
+    "id": "food",
+    "palette": "clay",
+    "name": "mesa",
+    "domain": "mesa.cozinha",
+    "category": "Alimentação",
+    "nav": ["Cozinha", "Cardápio", "Reservas"],
+    "eyebrow": "COZINHA DE ESTAÇÃO",
+    "title": ["Feito com tempo.", ""],
+    "accent": "Servido com afeto.",
+    "description": [
+      "Ingredientes frescos, massas da casa e bons motivos para ficar à mesa."
+    ],
+    "cta": "Descubra o menu",
+    "note": "Terça a domingo · 12h às 22h",
+    "artTitle": "À mesa, hoje",
+    "artSubtitle": "Massa da casa",
+    "footer": "Da nossa cozinha para o seu encontro.",
+    "tags": ["Menu da estação", "Reservas"],
+    "image": {
+      "src": "/assets/images/showcase/food.webp",
+      "alt": "Massa com folhas verdes, tomates e queijo em um prato de cerâmica.",
+      "width": 1000,
+      "height": 667
+    }
+  },
+  {
+    "id": "services",
+    "palette": "slate",
+    "name": "elo",
+    "domain": "elo.consultoria",
+    "category": "Serviços",
+    "nav": ["Soluções", "Método", "Contato"],
+    "eyebrow": "ESTRATÉGIA QUE VIRA PRÁTICA",
+    "title": ["Clareza para", ""],
+    "accent": "o próximo passo.",
+    "description": [
+      "Organizamos prioridades e conectamos pessoas para fazer seu negócio avançar."
+    ],
+    "cta": "Conheça nosso trabalho",
+    "note": "Estratégia próxima. Execução presente.",
+    "artTitle": "Um olhar sobre o todo",
+    "artSubtitle": "Pessoas & processos",
+    "footer": "O próximo capítulo do seu negócio.",
+    "tags": ["01 Diagnóstico", "02 Direção", "03 Ação"],
+    "image": {
+      "src": "/assets/images/showcase/services.webp",
+      "alt": "Equipe em reunião de trabalho, com cadernos, gráficos e notebook.",
+      "width": 1000,
+      "height": 667
+    }
+  }
+]

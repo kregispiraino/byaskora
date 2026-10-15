@@ -1,0 +1,143 @@
+{
+  "source": "byaskora-reforma.html",
+  "slug": "reestruturacao",
+  "hero": {
+    "eyebrow": "Reestruturação de sistemas e projetos com IA",
+    "title": "A ideia deu certo. O sistema precisa acompanhar.",
+    "description": "Corrigimos falhas, melhoramos o desempenho e reorganizamos a base do seu SaaS. Um plano de evolução que considera o produto que você já construiu.",
+    "cta": "Conversar sobre uma reestruturação"
+  },
+  "sections": [
+    {
+      "id": "reforma",
+      "kind": "delivery",
+      "title": "O que podemos melhorar.",
+      "intro": "Avaliamos o que funciona e o que está limitando a próxima etapa do seu produto.",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "Correção e estabilidade",
+          "paragraphs": [
+            "Investigamos as causas das falhas, revisamos os acessos e testamos os fluxos afetados pelas mudanças."
+          ]
+        },
+        {
+          "icon": "layers",
+          "title": "Estrutura e desempenho",
+          "paragraphs": [
+            "Reorganizamos o código, as consultas e as integrações que tornam o sistema lento ou difícil de manter."
+          ]
+        },
+        {
+          "icon": "window",
+          "title": "Interface e experiência",
+          "paragraphs": [
+            "Ajustamos a navegação, a responsividade e a consistência das telas para facilitar o uso no dia a dia."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "como-funciona",
+      "kind": "process",
+      "title": "Da avaliação à evolução.",
+      "intro": "Você entende o plano e acompanha cada mudança.",
+      "items": [
+        {
+          "title": "Avaliamos",
+          "paragraphs": [
+            "Conhecemos o produto, o código e os problemas que precisam de atenção."
+          ]
+        },
+        {
+          "title": "Planejamos",
+          "paragraphs": [
+            "Definimos o que preservar e o que mudar, com escopo, investimento e prazo."
+          ]
+        },
+        {
+          "title": "Reestruturamos",
+          "paragraphs": [
+            "Trabalhamos por etapas e validamos as alterações em um ambiente de testes."
+          ]
+        },
+        {
+          "title": "Publicamos",
+          "paragraphs": [
+            "Combinamos a transição, os cuidados com os dados e o plano de retorno."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contratacao",
+      "kind": "continuity",
+      "title": "Transição e continuidade.",
+      "items": [
+        {
+          "icon": "flow",
+          "title": "O sistema em uso",
+          "paragraphs": [
+            "Planejamos a entrada das mudanças com sua equipe, considerando os usuários, os dados e eventuais janelas de manutenção."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "Depois da entrega",
+          "paragraphs": [
+            "Documentamos as alterações. Suporte e atualizações seguem a manutenção contratada; novos recursos são avaliados à parte."
+          ]
+        }
+      ],
+      "note": "Migração ou reconstrução, quando necessárias, são discutidas com você antes de entrar no escopo."
+    },
+    {
+      "id": "duvidas",
+      "kind": "faq",
+      "items": [
+        {
+          "title": "Vocês trabalham em sistemas criados com IA?",
+          "paragraphs": [
+            "Sim. Avaliamos a tecnologia, o código disponível e os acessos para definir a viabilidade. Você pode começar mostrando o produto e o que precisa funcionar melhor."
+          ]
+        },
+        {
+          "title": "Vou precisar refazer tudo?",
+          "paragraphs": [
+            "Não necessariamente. Primeiro avaliamos o que pode ser mantido na estrutura atual. Se houver necessidade de migração ou reconstrução, explicamos os motivos e os impactos antes da decisão."
+          ]
+        },
+        {
+          "title": "Como ficam os clientes e os dados?",
+          "paragraphs": [
+            "Planejamos cópias de segurança, testes e conferência dos dados conforme as mudanças previstas. O plano de retorno e eventuais períodos de manutenção são combinados com você."
+          ]
+        },
+        {
+          "title": "Quanto custa e quanto tempo leva?",
+          "paragraphs": [
+            "Depende do estado do sistema e das mudanças necessárias. A proposta define escopo, investimento e prazo; uma análise técnica aprofundada pode ser contratada separadamente, com aprovação prévia."
+          ]
+        },
+        {
+          "title": "Como ficam o código e os acessos?",
+          "paragraphs": [
+            "Propriedade do código, acessos, licenças e entrega dos materiais ficam definidos no contrato. Restrições de plataformas e componentes de terceiros são identificadas antes da contratação."
+          ]
+        },
+        {
+          "title": "Posso contratar a manutenção depois?",
+          "paragraphs": [
+            "Sim. Suporte, hospedagem e atualizações são definidos conforme a necessidade do projeto. Novas funcionalidades têm escopo e investimento próprios quando não previstas no contrato."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "id": "contato",
+    "eyebrow": "Vamos olhar para o seu projeto",
+    "title": "Vamos evoluir seu sistema.",
+    "intro": "Mostre o que você já construiu e conte o que precisa funcionar melhor."
+  }
+}

@@ -1,0 +1,76 @@
+/* An inline vector character stays crisp and visible before JavaScript loads. */
+.mascot-stage {
+  position: relative;
+  z-index: 1;
+  width: min(720px, calc(100% - 40px));
+  height: clamp(290px, 30vw, 380px);
+  margin: 24px auto 22px;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.mascot-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.mascot-stage.is-arriving {
+  overflow: clip;
+}
+.mascot-arrival {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: 50% 85%;
+}
+.mascot-motion {
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+}
+.mascot-motion:hover {
+  color: var(--ink);
+  border-color: var(--quiet);
+}
+.mascot-motion:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 4px;
+}
+@media (max-width: 640px) {
+  .mascot-stage {
+    height: 280px;
+    margin-top: 18px;
+    margin-bottom: 14px;
+  }
+  .mascot-portrait {
+    /* Keep the character legible on narrow screens without changing its shape. */
+    width: 520px;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mascot-stage {
+    overflow: clip;
+  }
+  .mascot-motion {
+    right: 0;
+    bottom: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .mascot-motion {
+    display: none;
+  }
+}

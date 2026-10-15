@@ -1,0 +1,282 @@
+<div
+  class="service-scene app-scene"
+  data-scene="aplicativos"
+  role="group"
+  aria-label="Aplicativo interativo com dados demonstrativos"
+>
+  <div class="app-phone">
+    <div class="app-display">
+      <div class="app-device-status" aria-hidden="true">
+        <span>9:41</span><i class="app-island"></i
+        ><span class="app-device-signals"
+          ><svg width="14" height="12" viewBox="0 0 14 12">
+            <path
+              d="M1 10V8m4 2V6m4 4V3m4 7V1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            /></svg
+          ><i></i
+        ></span>
+      </div>
+      <div class="app-header">
+        <span class="app-wordmark">conecta<span>.</span></span
+        ><span class="app-profile" aria-label="Perfil de Lucas Pereira"
+          >LP</span
+        >
+      </div>
+      <div class="app-viewport">
+        <div
+          class="app-panel"
+          id="app-panel-clientes"
+          role="tabpanel"
+          aria-labelledby="app-tab-clientes"
+          tabindex="0"
+        >
+          <div class="app-intro">
+            <p>Olá, Lucas</p>
+            <h2>Sua agenda.</h2>
+            <span>Atendimento online · 30 minutos</span>
+          </div>
+          <div class="app-booking">
+            <div class="app-section-heading">
+              <h3>Outubro <span>2026</span></h3>
+              <svg class="icon" width="20" height="20" aria-hidden="true">
+                <use href="#i-table"></use>
+              </svg>
+            </div>
+            <div class="app-days" role="group" aria-label="Dia do atendimento">
+              <button
+                type="button"
+                data-app-day="21"
+                aria-pressed="true"
+                aria-label="21 de outubro"
+                disabled
+              >
+                <span>QUA</span><strong>21</strong></button
+              ><button
+                type="button"
+                data-app-day="22"
+                aria-pressed="false"
+                aria-label="22 de outubro"
+                disabled
+              >
+                <span>QUI</span><strong>22</strong></button
+              ><button
+                type="button"
+                data-app-day="23"
+                aria-pressed="false"
+                aria-label="23 de outubro"
+                disabled
+              >
+                <span>SEX</span><strong>23</strong>
+              </button>
+            </div>
+            <div
+              class="app-times"
+              role="group"
+              aria-label="Horário do atendimento"
+            >
+              <button
+                type="button"
+                data-app-time="09:00"
+                aria-pressed="true"
+                disabled
+              >
+                09:00</button
+              ><button
+                type="button"
+                data-app-time="11:00"
+                aria-pressed="false"
+                disabled
+              >
+                11:00</button
+              ><button
+                type="button"
+                data-app-time="14:30"
+                aria-pressed="false"
+                disabled
+              >
+                14:30
+              </button>
+            </div>
+          </div>
+          <div class="app-panel-action">
+            <button
+              type="button"
+              class="app-button"
+              data-confirm-booking
+              disabled
+            >
+              <span data-booking-label>Confirmar horário</span
+              ><svg class="icon" width="20" height="20" aria-hidden="true">
+                <use href="#i-arrow"></use>
+              </svg>
+            </button>
+            <p class="app-action-note" data-booking-result>
+              Escolha um dia e um horário.
+            </p>
+          </div>
+        </div>
+        <div
+          class="app-panel"
+          id="app-panel-equipe"
+          role="tabpanel"
+          aria-labelledby="app-tab-equipe"
+          tabindex="0"
+          hidden
+        >
+          <div class="app-intro">
+            <p>Equipe · OS #014</p>
+            <h2>Visita técnica.</h2>
+            <span>Unidade Centro · Hoje, 14h</span>
+          </div>
+          <div class="app-work">
+            <div class="app-task-list">
+              <label class="app-task"
+                ><input type="checkbox" data-app-task="0" disabled /><span
+                  class="app-task-check"
+                  ><svg class="icon" width="20" height="20" aria-hidden="true">
+                    <use href="#i-check"></use></svg></span
+                ><span>Conferir materiais</span></label
+              ><label class="app-task"
+                ><input type="checkbox" data-app-task="1" disabled /><span
+                  class="app-task-check"
+                  ><svg class="icon" width="20" height="20" aria-hidden="true">
+                    <use href="#i-check"></use></svg></span
+                ><span>Revisar a solicitação</span></label
+              ><label class="app-task"
+                ><input type="checkbox" data-app-task="2" disabled /><span
+                  class="app-task-check"
+                  ><svg class="icon" width="20" height="20" aria-hidden="true">
+                    <use href="#i-check"></use></svg></span
+                ><span>Registrar a visita</span></label
+              >
+            </div>
+            <div class="app-task-progress">
+              <div class="app-section-heading">
+                <span data-task-progress>0 de 3 etapas</span
+                ><span class="app-pill" data-visit-status>Em andamento</span>
+              </div>
+              <div class="app-task-track"><i data-task-track></i></div>
+            </div>
+          </div>
+          <div class="app-panel-action">
+            <button
+              type="button"
+              class="app-button"
+              data-complete-visit
+              disabled
+            >
+              <span>Concluir visita</span
+              ><svg class="icon" width="20" height="20" aria-hidden="true">
+                <use href="#i-check"></use>
+              </svg>
+            </button>
+            <p class="app-action-note" data-task-hint>
+              Marque as etapas para concluir.
+            </p>
+          </div>
+        </div>
+        <div
+          class="app-panel"
+          id="app-panel-gestao"
+          role="tabpanel"
+          aria-labelledby="app-tab-gestao"
+          tabindex="0"
+          hidden
+        >
+          <div class="app-intro">
+            <p>Gestão · Outubro</p>
+            <h2>Visão do dia.</h2>
+            <span>Sua operação, em um só lugar.</span>
+          </div>
+          <div class="app-metrics">
+            <div>
+              <strong data-app-bookings>12</strong><span>Agendamentos</span>
+            </div>
+            <div>
+              <strong data-app-visits>8</strong><span>Visitas concluídas</span>
+            </div>
+          </div>
+          <section class="app-approval">
+            <div class="app-section-heading">
+              <h3>Materiais</h3>
+              <span class="app-pending"
+                ><span data-approval-count>1</span> pendente</span
+              >
+            </div>
+            <p>Rafaela Cruz · Equipe técnica</p>
+            <div class="app-approval-bottom">
+              <strong>R$ 180<span>,00</span></strong
+              ><button type="button" data-approve-request disabled>
+                <span>Aprovar</span
+                ><svg class="icon" width="20" height="20" aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+          <div class="app-appointment" data-admin-appointment>
+            <span class="app-date-tile"
+              ><svg class="icon" width="20" height="20" aria-hidden="true">
+                <use href="#i-table"></use></svg
+            ></span>
+            <div>
+              <strong>Agenda integrada</strong
+              ><small>Os horários de Clientes aparecem aqui.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="app-bottom-nav"
+        role="tablist"
+        aria-label="Áreas do aplicativo"
+      >
+        <button
+          type="button"
+          role="tab"
+          id="app-tab-clientes"
+          aria-controls="app-panel-clientes"
+          aria-selected="true"
+          tabindex="0"
+          data-app-tab="clientes"
+          disabled
+        >
+          <svg class="icon" width="20" height="20" aria-hidden="true">
+            <use href="#i-grid"></use></svg
+          ><span>Clientes</span></button
+        ><button
+          type="button"
+          role="tab"
+          id="app-tab-equipe"
+          aria-controls="app-panel-equipe"
+          aria-selected="false"
+          tabindex="-1"
+          data-app-tab="equipe"
+          disabled
+        >
+          <svg class="icon" width="20" height="20" aria-hidden="true">
+            <use href="#i-table"></use></svg
+          ><span>Equipe</span></button
+        ><button
+          type="button"
+          role="tab"
+          id="app-tab-gestao"
+          aria-controls="app-panel-gestao"
+          aria-selected="false"
+          tabindex="-1"
+          data-app-tab="gestao"
+          disabled
+        >
+          <svg class="icon" width="20" height="20" aria-hidden="true">
+            <use href="#i-graph"></use></svg
+          ><span>Gestão</span>
+        </button>
+      </div>
+      <div class="app-home-indicator" aria-hidden="true"></div>
+      <p class="sr-only" role="status" data-app-feedback></p>
+    </div>
+  </div>
+</div>

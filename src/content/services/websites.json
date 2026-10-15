@@ -1,0 +1,141 @@
+{
+  "source": "byaskora-sites.html",
+  "slug": "websites",
+  "hero": {
+    "eyebrow": "Criação e desenvolvimento de sites para empresas",
+    "title": "Sites profissionais. À altura da sua empresa.",
+    "description": "Sites sob medida para apresentar sua empresa e facilitar o contato. Conteúdo, design e desenvolvimento juntos, do planejamento à publicação.",
+    "cta": "Conversar sobre um site"
+  },
+  "sections": [
+    {
+      "id": "entrega",
+      "kind": "delivery",
+      "title": "O que entregamos.",
+      "intro": "Um site pensado para a sua marca e para quem chega até ela.",
+      "items": [
+        {
+          "icon": "window",
+          "title": "A identidade da sua empresa",
+          "paragraphs": [
+            "Visual e conteúdo organizados para apresentar o que você faz e o que torna seu negócio diferente."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "Uma navegação simples",
+          "paragraphs": [
+            "Páginas que funcionam bem no celular e no computador, com caminhos claros para entrar em contato."
+          ]
+        },
+        {
+          "icon": "check",
+          "title": "Cuidado até a publicação",
+          "paragraphs": [
+            "Desempenho, acessibilidade e estrutura para buscas. Tudo revisado antes de colocar o site no ar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "como-funciona",
+      "kind": "process",
+      "title": "Como o site ganha forma.",
+      "intro": "Você acompanha as decisões e aprova cada etapa.",
+      "items": [
+        {
+          "title": "Conversamos",
+          "paragraphs": [
+            "Entendemos sua empresa, seu público e o papel do site."
+          ]
+        },
+        {
+          "title": "Definimos",
+          "paragraphs": ["Combinamos páginas, recursos, investimento e prazo."]
+        },
+        {
+          "title": "Criamos",
+          "paragraphs": [
+            "Organizamos o conteúdo, desenhamos e desenvolvemos com a sua aprovação."
+          ]
+        },
+        {
+          "title": "Publicamos",
+          "paragraphs": [
+            "Testamos as páginas, os contatos e preparamos os acessos."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contratacao",
+      "kind": "continuity",
+      "title": "Criação e manutenção.",
+      "items": [
+        {
+          "icon": "window",
+          "title": "O projeto",
+          "paragraphs": [
+            "Escopo, prazo e investimento definidos na proposta, antes do início."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "A continuidade",
+          "paragraphs": [
+            "Uma mensalidade para hospedagem, atualizações e suporte, conforme os cuidados contratados."
+          ]
+        }
+      ],
+      "note": "Novas páginas e funcionalidades são avaliadas à parte, salvo quando previstas no contrato."
+    },
+    {
+      "id": "duvidas",
+      "kind": "faq",
+      "items": [
+        {
+          "title": "Quanto custa e quanto tempo leva?",
+          "paragraphs": [
+            "Depende das páginas, dos recursos e dos materiais disponíveis. A proposta apresenta o investimento, o cronograma e as condições de manutenção antes de começar."
+          ]
+        },
+        {
+          "title": "Preciso ter textos e fotos prontos?",
+          "paragraphs": [
+            "Não. Partimos dos materiais que você já tem e definimos o que precisa ser criado ou revisado. Textos, fotografias e licenças de imagens ficam detalhados na proposta."
+          ]
+        },
+        {
+          "title": "Vocês também renovam sites existentes?",
+          "paragraphs": [
+            "Sim. Avaliamos o que manter e o que melhorar. Migração de conteúdo, domínio e redirecionamentos entram no planejamento quando necessários."
+          ]
+        },
+        {
+          "title": "Minha equipe poderá atualizar o site?",
+          "paragraphs": [
+            "Se você precisa editar textos e imagens, podemos prever uma área de edição no projeto. Esse recurso e as atualizações incluídas na manutenção ficam definidos no escopo."
+          ]
+        },
+        {
+          "title": "Como ficam o domínio, o código e os acessos?",
+          "paragraphs": [
+            "O contrato esclarece a titularidade do domínio, a propriedade do código e dos materiais, os acessos e as condições de transferência."
+          ]
+        },
+        {
+          "title": "Anúncios e SEO estão incluídos?",
+          "paragraphs": [
+            "O site recebe uma base técnica para buscas, sem garantia de posição no Google. Anúncios, produção contínua de conteúdo e SEO recorrente precisam estar previstos na proposta."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "id": "contato",
+    "eyebrow": "Vamos falar do seu projeto",
+    "title": "Vamos conversar sobre o seu site.",
+    "intro": "Conte o que sua empresa precisa apresentar. Nós ajudamos a definir o próximo passo."
+  }
+}

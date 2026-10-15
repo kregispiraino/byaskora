@@ -1,0 +1,472 @@
+/* One browser surface, two layout viewports. Artwork keeps its natural colors. */
+.service-hero .web-scene {
+  max-width: 1040px;
+  overflow-anchor: none;
+}
+.web-workspace,
+.web-client-site[data-palette='sage'] {
+  --site-bg: #f3f1e9;
+  --site-text: #303b30;
+  --site-muted: #5d665b;
+  --site-accent: #52664a;
+}
+.web-workspace[data-palette='clay'],
+.web-client-site[data-palette='clay'] {
+  --site-bg: #f7f0e5;
+  --site-text: #55332b;
+  --site-muted: #796052;
+  --site-accent: #8e4432;
+}
+.web-workspace[data-palette='slate'],
+.web-client-site[data-palette='slate'] {
+  --site-bg: #edf1f0;
+  --site-text: #243a43;
+  --site-muted: #576970;
+  --site-accent: #315c70;
+}
+.web-workspace {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  justify-content: center;
+  padding: 16px 36px 22px;
+}
+.web-browser {
+  position: relative;
+  flex: none;
+  width: min(100%, 880px);
+  /* Keep resize events inside the workspace until the next fitted frame. */
+  max-width: 100%;
+  border-radius: 10px;
+  background: var(--site-bg);
+  box-shadow: 0 0 28px 3px #00d8f810;
+}
+/* A centered shadow paints with the card, following its bounds during resize. */
+.web-workspace[data-device='mobile'] .web-browser {
+  box-shadow: 0 0 18px 2px #00d8f80c;
+}
+/* Reveal the complete surface after its first fit; failed JS keeps the static fallback. */
+html.enhancing .web-workspace:not([data-ready]) .web-browser {
+  visibility: hidden;
+}
+.web-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  background: var(--site-bg);
+  box-shadow:
+    0 0 0 1px #d0d8d7,
+    0 0 0 4px #ffffff80;
+  transition: background-color 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.web-canvas {
+  width: 100%;
+  transform: scale(var(--web-scale, 1));
+  transform-origin: top left;
+  container: web-site / inline-size;
+}
+[data-web-address] {
+  display: inline-block;
+  white-space: nowrap;
+}
+.web-showcase-controls {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2px;
+}
+.web-showcase-controls > span {
+  white-space: nowrap;
+  font-size: 7px;
+  font-variant-numeric: tabular-nums;
+  margin-right: 4px;
+}
+.web-showcase-controls button {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 28px;
+  padding: 0;
+  border-radius: 4px;
+  color: #d5dde1;
+}
+.web-showcase-controls button:hover {
+  color: #ffffff;
+  background: #343e46;
+}
+.web-showcase-controls button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+.web-showcase-controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.web-showcase {
+  display: grid;
+  overflow: hidden;
+  background: var(--site-bg);
+  transition: background-color 1.1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.web-workspace[data-resizing='true'] .web-showcase {
+  overflow: visible;
+}
+.web-client-site {
+  grid-area: 1 / 1;
+  min-width: 0;
+  padding: 0 32px;
+  color: var(--site-text);
+  line-height: 1.45;
+  visibility: hidden;
+  pointer-events: none;
+}
+.web-client-site[data-active='true'],
+.web-client-site[data-leaving='true'] {
+  visibility: visible;
+}
+.web-client-site[data-active='true'] {
+  pointer-events: auto;
+}
+.web-client-site[data-leaving='true'] {
+  z-index: 1;
+}
+.web-client-nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid color-mix(in srgb, var(--site-text) 15%, transparent);
+}
+.web-client-brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+.web-client-brand > span {
+  color: var(--site-accent);
+}
+.web-client-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 9px;
+}
+.web-client-links > span:last-child {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.web-client-menu {
+  display: none;
+}
+.web-client-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 34px;
+  align-items: center;
+  padding: 26px 0;
+}
+.web-client-copy {
+  min-width: 0;
+}
+.web-client-eyebrow {
+  display: block;
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+.web-client-copy h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin: 15px 0 14px;
+}
+.web-client-copy h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+.web-client-description {
+  max-width: 280px;
+  color: var(--site-muted);
+  font-size: 11px;
+  line-height: 1.65;
+  margin: 0;
+}
+.web-client-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 14px;
+  padding: 10px 0 7px;
+  border-bottom: 1px solid var(--site-accent);
+  font-size: 9px;
+  font-weight: 500;
+}
+.web-client-cta .icon {
+  width: 13px;
+  height: 13px;
+}
+.web-client-footnote {
+  display: block;
+  margin-top: 7px;
+  font-size: 7px;
+  color: var(--site-muted);
+}
+.web-client-art {
+  min-width: 0;
+  overflow: hidden;
+}
+.web-art-page {
+  width: 100%;
+}
+.web-photo {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.web-art-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 9px;
+  line-height: 1.4;
+  color: var(--site-text);
+  font-size: 8px;
+}
+[data-web-slide='furniture'] .web-photo {
+  object-position: center 65%;
+}
+[data-web-slide='food'] .web-photo {
+  object-position: center 30%;
+}
+[data-web-slide='services'] .web-photo {
+  object-position: center top;
+}
+.web-art-caption > span:last-child {
+  color: var(--site-muted);
+  font-size: 7px;
+}
+.web-client-bottom {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border-top: 1px solid color-mix(in srgb, var(--site-text) 15%, transparent);
+  color: var(--site-muted);
+  font-size: 7px;
+}
+.web-client-bottom > span:last-child {
+  display: flex;
+  gap: 17px;
+}
+/* Each example has its own typographic and material direction. */
+[data-web-slide='food'] .web-client-brand {
+  font-style: italic;
+  font-size: 32px;
+}
+[data-web-slide='food'] .web-client-copy h2 {
+  font-size: 37px;
+  letter-spacing: -0.04em;
+}
+[data-web-slide='food'] .web-client-cta {
+  background: var(--site-accent);
+  color: #fffaf2;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 2px;
+}
+[data-web-slide='food'] .web-client-nav {
+  border-bottom-style: double;
+  border-bottom-width: 3px;
+}
+[data-web-slide='services'] .web-client-brand {
+  font-family: var(--font);
+  font-weight: 650;
+  font-size: 27px;
+}
+[data-web-slide='services'] .web-client-copy h2 {
+  font-family: var(--font);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.055em;
+}
+[data-web-slide='services'] .web-client-copy h2 em {
+  font-style: normal;
+  font-weight: inherit;
+  color: var(--site-accent);
+}
+[data-web-slide='services'] .web-client-cta {
+  border: 1px solid #8e9ea3;
+  padding: 9px 12px;
+}
+[data-web-slide='services'] .web-client-bottom > span:last-child {
+  font-variant-numeric: tabular-nums;
+}
+.web-device-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+}
+.web-device-controls > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 42px;
+  padding: 6px 3px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.web-device-controls > button[aria-pressed='true'] {
+  color: var(--ink);
+  font-weight: 650;
+}
+.web-device-controls > button[aria-pressed='true'] svg {
+  stroke-width: 1.7;
+}
+.web-device-controls > button:hover {
+  color: var(--ink);
+}
+.web-device-controls > button:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 4px;
+}
+.web-device-controls > button:disabled {
+  cursor: default;
+}
+@container web-site (max-width: 500px) {
+  .web-client-site {
+    padding-inline: 20px;
+  }
+  .web-client-nav {
+    height: 42px;
+  }
+  .web-client-brand {
+    font-size: 26px;
+  }
+  [data-web-slide='food'] .web-client-brand {
+    font-size: 27px;
+  }
+  [data-web-slide='services'] .web-client-brand {
+    font-size: 24px;
+  }
+  .web-client-links {
+    display: none;
+  }
+  .web-client-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 18px;
+  }
+  .web-client-menu i {
+    height: 1px;
+    width: 18px;
+    background: var(--site-text);
+  }
+  .web-client-menu i:last-child {
+    width: 12px;
+    align-self: flex-end;
+  }
+  .web-client-hero {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 14px 0 12px;
+  }
+  .web-client-eyebrow {
+    font-size: 6px;
+  }
+  .web-client-copy h2 {
+    font-size: 33px;
+    margin: 10px 0 10px;
+  }
+  [data-web-slide='food'] .web-client-copy h2 {
+    font-size: 30px;
+  }
+  [data-web-slide='services'] .web-client-copy h2 {
+    font-size: 30px;
+  }
+  .web-client-description {
+    max-width: 260px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .web-client-cta {
+    margin-top: 11px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 9px;
+  }
+  [data-web-slide='food'] .web-client-cta {
+    padding: 8px 11px;
+  }
+  [data-web-slide='services'] .web-client-cta {
+    padding: 7px 10px;
+  }
+  .web-client-footnote {
+    display: none;
+  }
+  .web-photo {
+    height: 150px;
+  }
+  .web-art-caption {
+    padding-top: 7px;
+    font-size: 7px;
+  }
+  .web-art-caption > span:last-child {
+    font-size: 6px;
+  }
+  .web-client-bottom {
+    min-height: 32px;
+    font-size: 6px;
+  }
+  .web-client-bottom > span:first-child {
+    display: none;
+  }
+  .web-client-bottom > span:last-child {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 640px) {
+  .web-workspace {
+    padding: 12px 8px 19px;
+  }
+  .web-chrome {
+    padding-inline: 9px;
+    gap: 6px;
+  }
+  .web-address {
+    max-width: 130px;
+  }
+  .web-window-dots {
+    gap: 3px;
+  }
+  .web-window-dots i {
+    width: 4px;
+    height: 4px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .web-scene * {
+    transition: none !important;
+  }
+}

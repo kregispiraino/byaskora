@@ -1,3 +1,4 @@
+import { tokenRgb } from '../palette.js';
 /* ByAskora / Sinal.
  * Original Canvas 2D scene: disconnected fragments -> connected, living circuit.
  * No CDN, WebGL, fonts, analytics, data requests or third-party runtime.
@@ -18,13 +19,18 @@ export function initSignalScene() {
   }
   const motion = host.querySelector('[data-signal-motion]');
   const status = host.querySelector('[data-signal-status]');
+  const caption = host.parentElement.querySelector('[data-signal-caption]');
+  // Keep the caption and circuit on one brisk, synchronized timeline.
+  const connectionDuration = caption ? 1.6 : 2.65;
+  let captionEmphasized = null,
+    captionCharge = -1;
   if (!ctx || !power || !motion || !status) return;
   power.disabled = false;
 
   const reducedQuery = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const palette = {
-    cyan: [31, 225, 231],
+    cyan: tokenRgb('--accent'),
     mint: [125, 240, 201],
     amber: [255, 177, 58],
     silver: [195, 204, 204],
@@ -665,6 +671,29 @@ export function initSignalScene() {
     ctx.stroke();
     ctx.restore();
   }
+  function syncCaption() {
+    if (!caption) return;
+    // Light starts on the first frame, then settles as the circuit connects.
+    // The shared clock keeps pause and reversal in sync.
+    const phase = clamp((clock - transition.at) / connectionDuration);
+    const charge =
+      target === 1 ? (progress === 1 ? 1 : 1 - (1 - phase) ** 2) : 0;
+    if (charge !== captionCharge) {
+      captionCharge = charge;
+      caption.style.setProperty('--signal-charge', String(charge));
+      caption.style.setProperty('--signal-reveal', `${charge * 112}%`);
+      caption.style.setProperty('--signal-glint', `${150 - charge * 200}%`);
+    }
+    const connected = String(charge === 1);
+    if (host.dataset.connected !== connected)
+      host.dataset.connected = connected;
+    const emphasized = charge >= 0.9;
+    if (emphasized === captionEmphasized) return;
+    captionEmphasized = emphasized;
+    const label = emphasized ? caption.dataset.on : caption.dataset.off;
+    caption.textContent = label;
+    caption.dataset.label = label;
+  }
   function render() {
     const began = performance.now();
     ctx.setTransform(dpr * scale, 0, 0, dpr * scale, 0, 0);
@@ -677,6 +706,7 @@ export function initSignalScene() {
     drawComets(q);
     drawEcho();
     nodes.forEach((n) => drawNode(n));
+    syncCaption();
     frames++;
     frameCost = performance.now() - began;
   }
@@ -689,7 +719,7 @@ export function initSignalScene() {
     last = now;
     if (needsFrames()) {
       clock += dt;
-      const phase = clamp((clock - transition.at) / 2.65);
+      const phase = clamp((clock - transition.at) / connectionDuration);
       progress = mix(transition.from, transition.to, ease(phase));
       if (phase === 1) progress = target;
       render();
@@ -698,12 +728,14 @@ export function initSignalScene() {
     }
   }
   function wake() {
+    host.dataset.animating = String(needsFrames());
     if (needsFrames() && !raf) {
       last = 0;
       raf = requestAnimationFrame(tick);
     }
   }
   function stop() {
+    host.dataset.animating = 'false';
     if (raf) cancelAnimationFrame(raf);
     raf = 0;
     last = 0;
@@ -712,6 +744,7 @@ export function initSignalScene() {
     target = on ? 1 : 0;
     transition = { at: clock, from: progress, to: target };
     host.dataset.state = on ? 'on' : 'off';
+    syncCaption();
     power.setAttribute('aria-checked', String(on));
     power.setAttribute(
       'aria-label',

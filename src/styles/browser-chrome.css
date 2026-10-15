@@ -1,0 +1,40 @@
+/* Browser controls stay at physical size, even when desktop is viewed on a phone. */
+.web-chrome {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 12px;
+  background: #181c1f;
+  border-bottom: 1px solid #343c42;
+  color: #c2c9cd;
+}
+.web-window-dots {
+  display: flex;
+  gap: 4px;
+}
+.web-window-dots i {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #89969e;
+  border-radius: 50%;
+}
+.web-address {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 154px;
+  min-width: 0;
+  height: 20px;
+  border: 1px solid #404b53;
+  border-radius: 4px;
+  background: #252d33;
+  overflow: hidden;
+  font-size: 8px;
+}
+.web-address .icon {
+  width: 9px;
+  height: 9px;
+}

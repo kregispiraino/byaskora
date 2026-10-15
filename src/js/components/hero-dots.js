@@ -1,3 +1,4 @@
+import { tokenRgb } from '../palette.js';
 /* ByAskora / Dotted field — vanilla Canvas 2D, no dependency or network.
  * Small spring-loaded dots move away from the pointer and settle back in place.
  * Only the decoration moves. Canvas never intercepts clicks or text selection.
@@ -20,7 +21,7 @@ export function initHeroDots() {
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const mouse = window.matchMedia('(hover: hover) and (pointer: fine)');
   const contrast = window.matchMedia('(forced-colors: active)');
-  const COLORS = { base: [49, 63, 77], active: [31, 225, 231] };
+  const COLORS = { base: [49, 63, 77], active: tokenRgb('--accent') };
   const SETTINGS = {
     gap: 26,
     radius: 162,
@@ -224,7 +225,7 @@ export function initHeroDots() {
       if (
         event.buttons ||
         document.querySelector('dialog[open]') ||
-        target?.closest('.hero-stage,.site-header,.page-brand')
+        target?.closest('.hero-stage,.service-scene,.site-header,.page-brand')
       ) {
         leave();
         return;

@@ -1,0 +1,110 @@
+<div class="ai-scene" data-ai-chat data-scene="ai-solutions">
+  <div class="ai-conversation" data-ai-conversation hidden>
+    <div class="ai-conversation-inner">
+      <div class="ai-conversation-bar">
+        <span
+          ><span class="ai-light" aria-hidden="true"></span>AI Solutions</span
+        >
+        <button class="ai-reset" type="button" data-ai-reset>
+          Nova conversa {{icon:plus}}
+        </button>
+      </div>
+      <div
+        class="ai-thread"
+        data-ai-thread
+        role="log"
+        aria-label="Conversa com o assistente"
+        aria-live="polite"
+        aria-relevant="additions text"
+        tabindex="0"
+      ></div>
+    </div>
+  </div>
+  <form class="ai-composer" data-ai-form>
+    <fieldset data-ai-fields disabled>
+      <legend class="sr-only">Converse sobre uma solução com IA</legend>
+      <label class="sr-only" for="ai-message">Sua mensagem</label>
+      <textarea
+        id="ai-message"
+        name="message"
+        rows="2"
+        maxlength="2000"
+        placeholder="O que a IA poderia fazer pela sua empresa?"
+        required
+      ></textarea>
+      <div class="ai-composer-toolbar">
+        <span class="ai-composer-signature"
+          ><span class="ai-light" aria-hidden="true"></span>ByAskora
+          <span>/ AI Solutions</span></span
+        >
+        <button
+          class="ai-send"
+          type="submit"
+          aria-label="Enviar mensagem"
+          disabled
+        >
+          {{icon:arrow}}
+        </button>
+        <a
+          class="ai-project"
+          href="/contato?interesse=AI%20Solutions"
+          data-ai-project
+          data-open-project
+          data-interest="AI Solutions"
+          aria-haspopup="dialog"
+          aria-controls="project-dialog"
+          hidden
+          ><span>Conversar sobre uma solução</span>{{icon:arrow-up}}</a
+        >
+        <button
+          class="ai-stop"
+          type="button"
+          data-ai-stop
+          aria-label="Interromper resposta"
+          hidden
+        >
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </fieldset>
+  </form>
+  <div class="ai-feedback" data-ai-feedback hidden>
+    <p role="status" data-ai-status></p>
+    <button type="button" data-ai-retry hidden>
+      Tentar novamente {{icon:arrow}}
+    </button>
+  </div>
+  <div
+    class="ai-suggestions"
+    data-ai-suggestions
+    aria-label="Sugestões para começar"
+  >
+    <button
+      type="button"
+      data-ai-prompt="Quero melhorar o atendimento aos meus clientes."
+      disabled
+    >
+      {{icon:chat}}Atendimento
+    </button>
+    <button
+      type="button"
+      data-ai-prompt="Quero analisar documentos e relatórios com IA."
+      disabled
+    >
+      {{icon:graph}}Análises
+    </button>
+    <button
+      type="button"
+      data-ai-prompt="Quero automatizar tarefas da minha equipe."
+      disabled
+    >
+      {{icon:flow}}Operação
+    </button>
+  </div>
+  <noscript
+    ><p class="ai-fallback">
+      Ative o JavaScript para conversar com o assistente ou converse com nossa
+      equipe pelos botões desta página.
+    </p></noscript
+  >
+</div>

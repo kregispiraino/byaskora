@@ -5,9 +5,6 @@
 >
   <div class="section-heading-row">
     <h2 id="solutions-title">O que desenvolvemos.</h2>
-    <p class="section-intro">
-      Uma ferramenta própria ou uma extensão dos sistemas que você já usa.
-    </p>
   </div>
   <div class="solutions-layout">
     <div
@@ -18,258 +15,252 @@
     >
       <button
         class="solution-tab"
-        id="tab-sistemas"
-        type="button"
-        role="tab"
-        aria-selected="true"
-        aria-controls="panel-sistemas"
-        tabindex="0"
-      >
-        <span class="tab-text"
-          ><strong>Sistemas web</strong
-          ><span>Controles e rotinas da operação.</span></span
-        >{{icon:arrow}}
-      </button>
-      <button
-        class="solution-tab"
-        id="tab-dashboards"
-        type="button"
-        role="tab"
-        aria-selected="false"
-        aria-controls="panel-dashboards"
-        tabindex="-1"
-      >
-        <span class="tab-text"
-          ><strong>Dashboards</strong
-          ><span>Indicadores para acompanhar o negócio.</span></span
-        >{{icon:arrow}}
-      </button>
-      <button
-        class="solution-tab"
-        id="tab-automacoes"
-        type="button"
-        role="tab"
-        aria-selected="false"
-        aria-controls="panel-automacoes"
-        tabindex="-1"
-      >
-        <span class="tab-text"
-          ><strong>Automações</strong
-          ><span>Conexões entre ferramentas e processos.</span></span
-        >{{icon:arrow}}
-      </button>
-      <button
-        class="solution-tab"
         id="tab-sites"
         type="button"
         role="tab"
-        aria-selected="false"
+        aria-selected="true"
         aria-controls="panel-sites"
+        tabindex="0"
+      >
+        <span class="tab-text"
+          ><strong>Websites</strong
+          ><span>Sua empresa bem apresentada na web.</span></span
+        >{{icon:arrow}}</button
+      ><button
+        class="solution-tab"
+        id="tab-apps"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-apps"
         tabindex="-1"
       >
         <span class="tab-text"
-          ><strong>Sites institucionais</strong
-          ><span>Uma presença digital para a sua empresa.</span></span
+          ><strong>Aplicativos</strong
+          ><span>Seu negócio na mão de quem precisa.</span></span
+        >{{icon:arrow}}</button
+      ><button
+        class="solution-tab"
+        id="tab-sistemas"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-sistemas"
+        tabindex="-1"
+      >
+        <span class="tab-text"
+          ><strong>Sistemas</strong
+          ><span>Gestão e processos em um só lugar.</span></span
+        >{{icon:arrow}}</button
+      ><button
+        class="solution-tab"
+        id="tab-ai"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-ai"
+        tabindex="-1"
+      >
+        <span class="tab-text"
+          ><strong>AI Solutions</strong
+          ><span>Inteligência artificial a serviço do negócio.</span></span
+        >{{icon:arrow}}</button
+      ><button
+        class="solution-tab"
+        id="tab-mais"
+        type="button"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-mais"
+        tabindex="-1"
+      >
+        <span class="tab-text"
+          ><strong>E mais</strong
+          ><span>Projetos web para desafios específicos.</span></span
         >{{icon:arrow}}
       </button>
     </div>
     <div class="solution-panels">
       <div
         class="solution-panel"
-        id="panel-sistemas"
-        role="tabpanel"
-        aria-labelledby="tab-sistemas"
-        tabindex="0"
-      >
-        <div class="service-visual" aria-hidden="true">
-          <div class="demo-bar">
-            <span>{{icon:grid}} Solicitações</span
-            ><span class="demo-meta">Visão geral</span>
-          </div>
-          <div class="demo-system-body">
-            <div class="demo-summary">
-              <strong>Controle da operação</strong><span>3 registros</span>
-            </div>
-            <div class="demo-table">
-              <div class="demo-table-heading">
-                <span>Registro</span><span>Etapa</span><span>Status</span>
-              </div>
-              <div>
-                <span
-                  ><i class="demo-file">{{icon:table}}</i> Solicitação 001</span
-                ><span>Análise</span><span class="demo-tag">Em revisão</span>
-              </div>
-              <div>
-                <span
-                  ><i class="demo-file">{{icon:table}}</i> Solicitação 002</span
-                ><span>Aprovação</span><span class="demo-tag">Aguardando</span>
-              </div>
-              <div>
-                <span
-                  ><i class="demo-file">{{icon:table}}</i> Solicitação 003</span
-                ><span>Concluída</span
-                ><span class="demo-tag is-done">{{icon:check}} Validada</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="visual-note">Exemplo ilustrativo.</p>
-        <h3>Um sistema para a sua operação.</h3>
-        <p>
-          Solicitações, aprovações e registros seguindo as regras da sua
-          empresa, com histórico para acompanhar cada etapa.
-        </p>
-        <a
-          class="text-link"
-          href="mailto:{{email}}"
-          data-open-project
-          data-interest="Sistema web"
-          aria-haspopup="dialog"
-          aria-controls="project-dialog"
-          >Conversar sobre um sistema {{icon:arrow}}</a
-        >
-      </div>
-      <div
-        class="solution-panel"
-        id="panel-dashboards"
-        role="tabpanel"
-        aria-labelledby="tab-dashboards"
-        tabindex="0"
-        hidden
-      >
-        <div class="service-visual" aria-hidden="true">
-          <div class="demo-bar">
-            <span>{{icon:graph}} Indicadores</span
-            ><span class="demo-meta">Visão mensal</span>
-          </div>
-          <div class="demo-dashboard-body">
-            <div class="demo-kpis">
-              <div><small>Receitas</small><strong>R$ 84.000</strong></div>
-              <div><small>Despesas</small><strong>R$ 51.000</strong></div>
-              <div><small>Saldo</small><strong>R$ 33.000</strong></div>
-            </div>
-            <div class="demo-bars">
-              <div><i style="--bar: 38%"></i><span>Jan</span></div>
-              <div><i style="--bar: 52%"></i><span>Fev</span></div>
-              <div><i style="--bar: 44%"></i><span>Mar</span></div>
-              <div><i style="--bar: 69%"></i><span>Abr</span></div>
-              <div><i style="--bar: 62%"></i><span>Mai</span></div>
-              <div><i style="--bar: 87%"></i><span>Jun</span></div>
-            </div>
-          </div>
-        </div>
-        <p class="visual-note">Dados fictícios.</p>
-        <h3>Os números que você precisa acompanhar.</h3>
-        <p>
-          Painéis financeiros, comerciais e operacionais, com filtros para
-          consultar os detalhes e entender os resultados.
-        </p>
-        <a
-          class="text-link"
-          href="mailto:{{email}}"
-          data-open-project
-          data-interest="Dashboard"
-          aria-haspopup="dialog"
-          aria-controls="project-dialog"
-          >Conversar sobre um dashboard {{icon:arrow}}</a
-        >
-      </div>
-      <div
-        class="solution-panel"
-        id="panel-automacoes"
-        role="tabpanel"
-        aria-labelledby="tab-automacoes"
-        tabindex="0"
-        hidden
-      >
-        <div class="service-visual" aria-hidden="true">
-          <div class="demo-bar">
-            <span>{{icon:flow}} Importação de dados</span
-            ><span class="demo-meta">Conexão entre sistemas</span>
-          </div>
-          <div class="demo-automation-body">
-            <div class="demo-flow">
-              <div>
-                <span class="demo-flow-icon">{{icon:table}}</span
-                ><strong>Arquivo</strong>
-              </div>
-              <i></i>
-              <div>
-                <span class="demo-flow-icon is-central">{{icon:flow}}</span
-                ><strong>Validação</strong>
-              </div>
-              <i></i>
-              <div>
-                <span class="demo-flow-icon">{{icon:grid}}</span
-                ><strong>Sistema</strong>
-              </div>
-            </div>
-            <div class="demo-flow-foot">
-              {{icon:check}} Registros conferidos antes da importação.
-            </div>
-          </div>
-        </div>
-        <p class="visual-note">Fluxo ilustrativo.</p>
-        <h3>Tarefas que não precisam ser manuais.</h3>
-        <p>
-          Importação de arquivos e troca de informações entre sistemas.
-          Avaliamos as possibilidades de integração antes de definir o projeto.
-        </p>
-        <a
-          class="text-link"
-          href="mailto:{{email}}"
-          data-open-project
-          data-interest="Automação"
-          aria-haspopup="dialog"
-          aria-controls="project-dialog"
-          >Conversar sobre uma automação {{icon:arrow}}</a
-        >
-      </div>
-      <div
-        class="solution-panel"
         id="panel-sites"
         role="tabpanel"
         aria-labelledby="tab-sites"
         tabindex="0"
-        hidden
       >
-        <div class="service-visual" aria-hidden="true">
-          <div class="demo-bar">
-            <span>{{icon:window}} Site institucional</span
-            ><span class="demo-meta">Desktop e celular</span>
-          </div>
-          <div class="demo-website-body">
-            <div class="demo-site-nav">
-              <strong>sua empresa</strong
-              ><span>Sobre &nbsp; Serviços &nbsp; Contato</span>
-            </div>
-            <div class="demo-site-hero">
-              <div>
-                <strong>Conheça o que<br />podemos fazer.</strong
-                ><span class="demo-site-line"></span
-                ><span class="demo-site-line short"></span
-                ><span class="demo-site-button"
-                  >Entre em contato {{icon:arrow-up}}</span
-                >
-              </div>
-              <div class="demo-site-sculpture"><i></i><i></i><i></i></div>
-            </div>
-          </div>
+        <div class="pillar-preview pillar-preview-website">
+          <img
+            src="/assets/images/pillars/websites.webp"
+            width="1760"
+            height="1002"
+            alt="Website de decoração Forma, com fotografia de um ambiente e apresentação da coleção."
+            decoding="async"
+            loading="lazy"
+          />
         </div>
-        <p class="visual-note">Composição ilustrativa.</p>
         <h3>Um site à altura da sua empresa.</h3>
         <p>
           Conteúdo, serviços e contato organizados para apresentar o seu
           trabalho e facilitar a chegada de novos clientes.
         </p>
+        <a class="text-link" href="/websites"
+          >Conhecer websites {{icon:arrow}}</a
+        >
+      </div>
+      <div
+        class="solution-panel"
+        id="panel-apps"
+        role="tabpanel"
+        aria-labelledby="tab-apps"
+        tabindex="0"
+        hidden
+      >
+        <div
+          class="pillar-preview pillar-preview-phones"
+          role="img"
+          aria-label="Três telas do aplicativo: agenda de clientes, checklist da equipe e visão da gestão."
+        >
+          <img
+            src="/assets/images/pillars/aplicativos-clientes.webp"
+            width="584"
+            height="1042"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          /><img
+            src="/assets/images/pillars/aplicativos-equipe.webp"
+            width="584"
+            height="1042"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          /><img
+            src="/assets/images/pillars/aplicativos-gestao.webp"
+            width="584"
+            height="1042"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <h3>Seu negócio mais perto das pessoas.</h3>
+        <p>
+          Aplicativos para atender clientes, apoiar equipes e colocar ideias em
+          movimento. Uma experiência intuitiva, com a identidade da sua empresa,
+          no celular.
+        </p>
+        <a class="text-link" href="/aplicativos"
+          >Conhecer aplicativos {{icon:arrow}}</a
+        >
+      </div>
+      <div
+        class="solution-panel"
+        id="panel-sistemas"
+        role="tabpanel"
+        aria-labelledby="tab-sistemas"
+        tabindex="0"
+        hidden
+      >
+        <div class="pillar-preview">
+          <img
+            src="/assets/images/pillars/sistemas.webp"
+            width="2240"
+            height="1120"
+            alt="Dashboard gerencial com indicadores, gráfico da operação e resultados por área."
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <h3>Um sistema para a sua operação.</h3>
+        <p>
+          Processos, informações e indicadores reunidos em um sistema que segue
+          as regras da sua empresa. Mais clareza para acompanhar a operação e
+          tomar decisões.
+        </p>
+        <a class="text-link" href="/sistemas"
+          >Conhecer sistemas {{icon:arrow}}</a
+        >
+      </div>
+      <div
+        class="solution-panel"
+        id="panel-ai"
+        role="tabpanel"
+        aria-labelledby="tab-ai"
+        tabindex="0"
+        hidden
+      >
+        <div class="pillar-preview pillar-preview-ai">
+          <img
+            src="/assets/images/pillars/ai-solutions.webp"
+            width="1120"
+            height="318"
+            alt="Campo de conversa AI Solutions, com uma pergunta sobre atendimento e botão de enviar."
+            decoding="async"
+            loading="lazy"
+          />
+        </div>
+        <h3>Inteligência para o seu dia a dia.</h3>
+        <p>
+          Chatbots, agentes de análise e assistentes conectados ao conhecimento
+          da sua empresa. Menos tarefas repetitivas, mais espaço para o que
+          precisa da sua equipe.
+        </p>
+        <a class="text-link" href="/ai-solutions"
+          >Conhecer AI Solutions {{icon:arrow}}</a
+        >
+      </div>
+      <div
+        class="solution-panel solution-panel-more"
+        id="panel-mais"
+        role="tabpanel"
+        aria-labelledby="tab-mais"
+        tabindex="0"
+        hidden
+      >
+        <h3>Desenvolvimento web para necessidades específicas.</h3>
+        <p>
+          Desenvolvimento web sob medida para a rotina, as regras e os desafios
+          do seu negócio. Criamos ferramentas específicas e evoluímos as que
+          você já utiliza.
+        </p>
+        <dl class="project-types">
+          <div>
+            <dt>Dashboards e painéis administrativos</dt>
+            <dd>
+              Indicadores, relatórios e gestão de usuários, conteúdos e
+              operações em uma interface própria.
+            </dd>
+          </div>
+          <div>
+            <dt>Workflows e automações</dt>
+            <dd>
+              Fluxos de aprovação, tarefas, documentos e integrações para
+              conectar as etapas do trabalho.
+            </dd>
+          </div>
+          <div>
+            <dt>Portais, e-commerces e plataformas de nicho</dt>
+            <dd>
+              Áreas de clientes, agendamentos, catálogos, ferramentas internas e
+              produtos SaaS para públicos específicos.
+            </dd>
+          </div>
+          <div>
+            <dt>Reestruturação e evolução</dt>
+            <dd>
+              Organização de código, melhorias de desempenho e novas integrações
+              para o produto que já existe.
+            </dd>
+          </div>
+        </dl>
         <a
           class="text-link"
-          href="mailto:{{email}}"
+          href="/contato"
           data-open-project
-          data-interest="Site institucional"
+          data-interest="Projeto web sob medida"
           aria-haspopup="dialog"
           aria-controls="project-dialog"
-          >Conversar sobre um site {{icon:arrow}}</a
+          >Conversar sobre um projeto {{icon:arrow}}</a
         >
       </div>
     </div>

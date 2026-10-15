@@ -3,6 +3,16 @@ export function initTabs() {
   document.documentElement.classList.add('tabs-ready');
   const tabs = $$('.solution-tab');
   const panels = $$('.solution-panel');
+  const selector = $('.solution-selector');
+  if (!selector) return;
+  const compact = matchMedia('(max-width: 900px)');
+  const syncOrientation = () =>
+    selector.setAttribute(
+      'aria-orientation',
+      compact.matches ? 'horizontal' : 'vertical',
+    );
+  compact.addEventListener('change', syncOrientation);
+  syncOrientation();
   function selectTab(tab, focus = false) {
     if (!tab) return;
     tabs.forEach((t) => {

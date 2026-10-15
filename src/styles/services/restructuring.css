@@ -1,0 +1,114 @@
+/* The institutional circuit is shared unchanged. Only its conclusion is specific
+   to this service, following the circuit's real power and animation states. */
+.service-hero .signal-service-scene {
+  max-width: 1080px;
+  display: flex;
+  flex-direction: column;
+}
+.signal-service-scene .hero-stage.signal-stage {
+  width: 100%;
+  margin: 0;
+}
+.signal-caption {
+  --signal-caption-color: color-mix(in srgb, var(--accent) 42%, var(--quiet));
+  position: relative;
+  z-index: 2;
+  margin: -12px 0 0;
+  text-align: center;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.4;
+  font-weight: 520;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+}
+.signal-caption > span {
+  --signal-charge: 0;
+  --signal-reveal: 0%;
+  --signal-glint: 150%;
+  position: relative;
+  display: inline-block;
+  color: color-mix(in srgb, var(--muted) 28%, transparent);
+}
+.signal-caption > span::before,
+.signal-caption > span::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    #000 calc(var(--signal-reveal) - 12%),
+    transparent var(--signal-reveal)
+  );
+  mask-image: linear-gradient(
+    90deg,
+    #000 calc(var(--signal-reveal) - 12%),
+    transparent var(--signal-reveal)
+  );
+}
+.signal-caption > span::before {
+  color: var(--signal-caption-color);
+  text-shadow:
+    0 0 8px color-mix(in srgb, var(--accent) 14%, transparent),
+    0 0 18px color-mix(in srgb, var(--accent) 7%, transparent);
+}
+.signal-caption > span::after {
+  color: transparent;
+  background: linear-gradient(
+      110deg,
+      transparent 36%,
+      var(--signal-caption-color) 43%,
+      var(--surface) 49%,
+      var(--accent-light) 52%,
+      transparent 60%
+    )
+    var(--signal-glint) 0 / 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: calc(var(--signal-charge) * 0.5);
+}
+.signal-stage[data-connected='true'] + .signal-caption > span::after {
+  opacity: 0.5;
+  animation: scale-sheen 4.8s ease-in-out infinite paused;
+}
+.signal-stage[data-connected='true'][data-animating='true']
+  + .signal-caption
+  > span::after {
+  animation-play-state: running;
+}
+@keyframes scale-sheen {
+  0%,
+  14% {
+    background-position: 150% 0;
+  }
+  65%,
+  100% {
+    background-position: -50% 0;
+  }
+}
+@media (max-width: 640px) {
+  .signal-caption {
+    margin-top: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .signal-caption > span,
+  .signal-caption > span::after {
+    animation: none !important;
+    transition: none;
+  }
+  .signal-stage[data-connected='true'] + .signal-caption > span::after {
+    opacity: 0;
+  }
+}
+@media (forced-colors: active), print {
+  .signal-caption > span {
+    color: CanvasText;
+    text-shadow: none;
+  }
+  .signal-caption > span::before,
+  .signal-caption > span::after {
+    display: none;
+  }
+}

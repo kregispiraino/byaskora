@@ -1,0 +1,140 @@
+{
+  "source": "byaskora-ai-solutions",
+  "slug": "ai-solutions",
+  "hero": {
+    "title": "Inteligência artificial. Aplicada ao seu negócio.",
+    "description": "Chatbots que atendem, agentes que analisam e assistentes que apoiam sua equipe. Soluções com IA conectadas ao conhecimento e à rotina da sua empresa.",
+    "cta": "Conversar sobre uma solução"
+  },
+  "sections": [
+    {
+      "id": "solucoes",
+      "kind": "delivery",
+      "title": "Onde a IA faz diferença.",
+      "intro": "Começamos por uma necessidade real. A tecnologia entra para ajudar a resolvê-la.",
+      "items": [
+        {
+          "icon": "chat",
+          "title": "Atendimento mais ágil",
+          "paragraphs": [
+            "Chatbots para orientar clientes, responder dúvidas e encaminhar solicitações, com passagem para sua equipe quando necessário."
+          ]
+        },
+        {
+          "icon": "graph",
+          "title": "Agentes de análise",
+          "paragraphs": [
+            "Documentos, dados e relatórios transformados em resumos e análises que ajudam sua equipe a investigar e decidir."
+          ]
+        },
+        {
+          "icon": "flow",
+          "title": "Assistentes para a operação",
+          "paragraphs": [
+            "Busca no conhecimento interno e apoio a tarefas recorrentes, com integrações, permissões e aprovações definidas."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "como-funciona",
+      "kind": "process",
+      "title": "Da oportunidade à prática.",
+      "intro": "Um caso de uso claro, testado com quem vai utilizar.",
+      "items": [
+        {
+          "title": "Entendemos",
+          "paragraphs": [
+            "Mapeamos a tarefa, as informações disponíveis e o resultado esperado."
+          ]
+        },
+        {
+          "title": "Desenhamos",
+          "paragraphs": [
+            "Definimos canais, integrações, limites de atuação e investimento."
+          ]
+        },
+        {
+          "title": "Validamos",
+          "paragraphs": [
+            "Testamos respostas e ações em cenários reais, com a participação da sua equipe."
+          ]
+        },
+        {
+          "title": "Implantamos",
+          "paragraphs": [
+            "Conectamos a solução à rotina e acompanhamos os ajustes previstos no projeto."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contratacao",
+      "kind": "continuity",
+      "title": "Implantação e evolução.",
+      "items": [
+        {
+          "icon": "shield",
+          "title": "Controle desde o início",
+          "paragraphs": [
+            "Fontes de conhecimento, acessos e ações permitidas definidos no projeto. Etapas sensíveis podem exigir aprovação humana."
+          ]
+        },
+        {
+          "icon": "link",
+          "title": "Cuidado contínuo",
+          "paragraphs": [
+            "Revisão de respostas, atualização de conteúdo e suporte conforme o acompanhamento contratado."
+          ]
+        }
+      ],
+      "note": "Custos de modelos, mensagens e serviços externos são dimensionados na proposta, conforme o uso previsto."
+    },
+    {
+      "id": "duvidas",
+      "kind": "faq",
+      "items": [
+        {
+          "title": "Por onde começar com IA na empresa?",
+          "paragraphs": [
+            "Por uma tarefa que consome tempo ou gera dúvidas frequentes. Avaliamos as informações disponíveis e definimos um primeiro uso com critérios claros de qualidade."
+          ]
+        },
+        {
+          "title": "A solução pode usar nossos documentos?",
+          "paragraphs": [
+            "Sim, conforme os formatos e acessos disponíveis. Organizamos as fontes e definimos o que cada usuário pode consultar e como o conteúdo será atualizado."
+          ]
+        },
+        {
+          "title": "Pode se conectar ao WhatsApp e ao meu sistema?",
+          "paragraphs": [
+            "Avaliamos os canais e as APIs disponíveis. Integrações, contas necessárias e eventuais custos de mensagens ou serviços entram no escopo."
+          ]
+        },
+        {
+          "title": "Como vocês lidam com respostas incorretas?",
+          "paragraphs": [
+            "IA pode errar. Definimos testes, limites de atuação e encaminhamento para pessoas, além de referências às fontes quando aplicável. Não prometemos respostas infalíveis."
+          ]
+        },
+        {
+          "title": "Como ficam os dados da empresa?",
+          "paragraphs": [
+            "Os dados enviados, as permissões, a retenção e o provedor são avaliados no projeto. As condições de uso das informações e as responsabilidades ficam definidas na contratação."
+          ]
+        },
+        {
+          "title": "Quanto custa criar e manter a solução?",
+          "paragraphs": [
+            "Depende do caso de uso, das integrações e do volume esperado. A proposta separa desenvolvimento, acompanhamento e custos de consumo dos serviços utilizados."
+          ]
+        }
+      ]
+    }
+  ],
+  "closing": {
+    "title": "Vamos encontrar espaço para a IA.",
+    "intro": "Conte o que sua equipe precisa resolver. Nós ajudamos a transformar isso em uma solução."
+  }
+}

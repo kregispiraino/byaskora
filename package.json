@@ -15,7 +15,9 @@
     "format:check": "prettier --check .",
     "test": "node --test tests/unit/*.test.js",
     "test:e2e": "playwright test",
-    "check": "npm run lint && npm run format:check && npm test && npm run build && npm run test:e2e"
+    "check": "npm run lint && npm run format:check && npm test && npm run build && npm run test:e2e",
+    "snapshots:pillars": "node tools/capture-pillars.js",
+    "test:byaskora": "playwright test tests/e2e/site.spec.js tests/e2e/services.spec.js tests/e2e/ai-chat.spec.js tests/e2e/mascot.spec.js tests/e2e/pages.spec.js tests/e2e/entry-search.spec.js"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

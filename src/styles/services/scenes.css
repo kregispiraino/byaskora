@@ -1,0 +1,5 @@
+/* Shared foundation; each service owns its illustration styles. */
+.service-scene {
+  margin: 0;
+  min-width: 0;
+}

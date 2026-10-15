@@ -1,28 +1,13 @@
-import '../styles/tokens.css';
-import '../styles/shared.css';
-import '../styles/landing.css';
-import '../styles/hero-dots.css';
-import '../styles/signal-scene.css';
-import '../styles/fallbacks.css';
-import config from '../site.json';
+import { afterPaint } from './dom.js';
 import { initNavigation } from './components/navigation.js';
-import { initTabs } from './components/tabs.js';
 import { initDialogs } from './components/dialogs.js';
-import { initContact } from './components/contact.js';
 import { initHeroDots } from './components/hero-dots.js';
-import { initSignalScene } from './components/signal-scene.js';
 
 const navigation = initNavigation();
-initTabs();
-initContact(config, initDialogs(navigation));
+initDialogs(navigation);
 
-// Decorative effects initialize after the first paint, leaving content and controls ready.
-requestAnimationFrame(() => {
-  requestAnimationFrame(() => {
-    initHeroDots();
-    initSignalScene();
-  });
-});
+// Shared decoration starts after content and navigation are usable.
+afterPaint(initHeroDots);
 
 let printState = [];
 addEventListener('beforeprint', () => {

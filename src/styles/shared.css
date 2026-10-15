@@ -67,7 +67,7 @@ p {
 }
 ::selection {
   color: var(--ink);
-  background: #bff5eb;
+  background: var(--accent-soft);
 }
 :focus-visible {
   outline: 2px solid var(--ink);
@@ -174,14 +174,6 @@ p {
 .text-link:hover .icon {
   transform: translateX(3px);
 }
-.inline-link {
-  text-decoration: underline;
-  text-decoration-color: #b6c1c5;
-  text-underline-offset: 3px;
-}
-.inline-link:hover {
-  text-decoration-color: var(--ink);
-}
 
 /* Brand stays at the document top. ONLY the navigation is fixed to the viewport. */
 .page-brand {
@@ -211,9 +203,6 @@ p {
   letter-spacing: -0.065em;
   padding-bottom: 5px;
   color: #0f1113;
-}
-.brand-period {
-  color: var(--cyan);
 }
 .site-header {
   position: fixed;
@@ -254,8 +243,7 @@ p {
   gap: 2px;
   padding-left: 7px;
 }
-.nav-pages > a,
-.nav-more > summary {
+.nav-pages > a {
   display: flex;
   align-items: center;
   min-height: 37px;
@@ -267,53 +255,11 @@ p {
   transition: background 0.2s;
 }
 .nav-pages > a:hover,
-.nav-more > summary:hover,
-.nav-more[open] summary,
 .nav-pages > a[aria-current='page'] {
   background: #f3f6f8;
 }
 .nav-pages > a[aria-current='page'] {
-  box-shadow: inset 0 -2px #1fe1e7;
-}
-.nav-more {
-  position: relative;
-}
-.nav-more summary {
-  gap: 5px;
-  list-style: none;
-  cursor: pointer;
-}
-.nav-more summary::-webkit-details-marker {
-  display: none;
-}
-.nav-more summary .icon {
-  width: 12px;
-  height: 12px;
-}
-.nav-more.has-current summary {
-  background: #f3f6f8;
-  box-shadow: inset 0 -2px #1fe1e7;
-}
-.nav-dropdown {
-  position: absolute;
-  top: calc(100% + 19px);
-  right: 0;
-  min-width: 180px;
-  padding: 7px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: 0 12px 32px #0f111314;
-}
-.nav-dropdown a {
-  display: block;
-  padding: 11px 14px;
-  font-size: 12px;
-  border-radius: 7px;
-}
-.nav-dropdown a:hover,
-.nav-dropdown a[aria-current='page'] {
-  background: #f3f6f8;
+  box-shadow: inset 0 -2px var(--accent);
 }
 .nav-actions {
   display: flex;
@@ -321,19 +267,6 @@ p {
   gap: 5px;
   padding-left: 9px;
   border-left: 1px solid #ebedf1;
-}
-.nav-login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 37px;
-  padding: 0 15px;
-  border-radius: 8px;
-  font-size: 11px;
-  font-weight: 550;
-}
-.nav-login:hover {
-  background: #f3f6f8;
 }
 .nav-contact {
   display: flex;
@@ -450,15 +383,6 @@ p {
   font-size: 10px;
   color: #69727b;
 }
-.footer-language {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.footer-language .icon {
-  width: 12px;
-  height: 12px;
-}
 @media (max-width: 1100px) {
   .wrap {
     width: calc(100% - 64px);
@@ -476,16 +400,12 @@ p {
   .nav-pages {
     padding-left: 2px;
   }
-  .nav-pages > a,
-  .nav-more > summary {
+  .nav-pages > a {
     padding-inline: 8px;
     font-size: 10px;
   }
   .nav-actions {
     padding-left: 6px;
-  }
-  .nav-login {
-    padding-inline: 11px;
   }
   .nav-contact {
     gap: 12px;
@@ -495,7 +415,7 @@ p {
     gap: 30px;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .site-header {
     top: 17px;
   }
@@ -575,21 +495,10 @@ p {
     align-items: stretch;
     padding: 0;
   }
-  .nav-pages > a,
-  .nav-more > summary {
+  .nav-pages > a {
     font-size: 12px;
     min-height: 43px;
     padding-inline: 14px;
-  }
-  .nav-more summary {
-    justify-content: space-between;
-  }
-  .nav-dropdown {
-    position: static;
-    box-shadow: none;
-    border: 0;
-    background: #f5f7f7;
-    margin: 0 8px;
   }
   .nav-actions {
     border-left: 0;

@@ -45,7 +45,9 @@ test('SEO, local assets, anchors and security headers', async ({
     await page
       .locator('img')
       .evaluateAll((images) =>
-        images.every((img) => img.complete && img.naturalWidth > 0),
+        images
+          .filter((img) => img.loading !== 'lazy')
+          .every((img) => img.complete && img.naturalWidth > 0),
       ),
   ).toBe(true);
   expect(await (await request.get('/robots.txt')).text()).toContain('Allow: /');
@@ -55,56 +57,183 @@ test('SEO, local assets, anchors and security headers', async ({
   expect((await request.get('/missing-page')).status()).toBe(404);
 });
 
-test('service tabs support keyboard and footer shortcuts', async ({ page }) => {
-  const first = page.getByRole('tab', { name: /Sistemas web/ });
-  await first.focus();
-  await first.press('ArrowDown');
-  await expect(page.getByRole('tab', { name: /Dashboards/ })).toBeFocused();
-  await expect(page.locator('#panel-dashboards')).toBeVisible();
-  await page.getByRole('tab', { name: /Dashboards/ }).press('End');
-  await expect(page.locator('#panel-sites')).toBeVisible();
-  await page.locator('[data-service="automacoes"]').click();
-  await expect(page.locator('#panel-automacoes')).toBeVisible();
-});
-
-test('contact validation, review, editing, escaping and reset of interest', async ({
+test('five development pillars support keyboard navigation and service links', async ({
   page,
 }) => {
-  await page.locator('#tab-dashboards').click();
-  await page.locator('#panel-dashboards [data-open-project]').click();
+  const tabs = page.getByRole('tab');
+  await expect(tabs).toHaveCount(5);
+  const first = page.getByRole('tab', { name: /^Websites/ });
+  await first.focus();
+  await first.press('ArrowDown');
+  await expect(page.getByRole('tab', { name: /^Aplicativos/ })).toBeFocused();
+  await expect(page.locator('#panel-apps')).toBeVisible();
+  await page.getByRole('tab', { name: /^Aplicativos/ }).press('End');
+  await expect(page.locator('#panel-mais')).toBeVisible();
+  await page.getByRole('tab', { name: /^E mais/ }).press('ArrowDown');
+  await expect(first).toBeFocused();
+  await expect(page.locator('#panel-sites')).toBeVisible();
+  await expect(page.locator('.expertise-band span')).toHaveText([
+    'Websites',
+    'Aplicativos',
+    'Sistemas',
+    'AI Solutions',
+    'E mais',
+  ]);
+  for (const [name, url] of [
+    ['Websites', '/websites'],
+    ['Aplicativos', '/aplicativos'],
+    ['Sistemas', '/sistemas'],
+    ['AI Solutions', '/ai-solutions'],
+  ]) {
+    await expect(
+      page.locator('footer').getByRole('link', { name, exact: true }),
+    ).toHaveAttribute('href', url);
+  }
+});
+
+test('static pillar previews link to services; E mais opens the contact chooser', async ({
+  page,
+}) => {
+  for (const [key, path, count] of [
+    ['sites', '/websites', 1],
+    ['apps', '/aplicativos', 3],
+    ['sistemas', '/sistemas', 1],
+    ['ai', '/ai-solutions', 1],
+  ]) {
+    await page.locator(`#tab-${key}`).click();
+    const panel = page.locator(`#panel-${key}`);
+    await expect(panel.locator('.pillar-preview img')).toHaveCount(count);
+    await expect(panel.locator('button, input, canvas')).toHaveCount(0);
+    await expect(panel.getByRole('link')).toHaveAttribute('href', path);
+    await expect
+      .poll(() =>
+        panel
+          .locator('img')
+          .evaluateAll((images) =>
+            images.every((img) => img.complete && img.naturalWidth > 0),
+          ),
+      )
+      .toBe(true);
+  }
+  await page.locator('#tab-mais').click();
+  await expect(page.locator('#panel-mais img')).toHaveCount(0);
+  await page.locator('#panel-mais [data-open-project]').click();
   const dialog = page.locator('#project-dialog');
   await expect(dialog).toBeVisible();
-  await page.getByRole('button', { name: 'Continuar', exact: true }).click();
-  await expect(page.locator('#contact-name')).toBeFocused();
-  await expect(page.locator('#contact-name')).toHaveAttribute(
-    'aria-invalid',
-    'true',
+  await expect(dialog.getByRole('link', { name: /WhatsApp/ })).toHaveAttribute(
+    'href',
+    'https://wa.me/message/3DBMZ5ZZHD4NC1',
   );
+  await expect(dialog.locator('form')).toHaveCount(0);
+  await dialog.locator('[data-contact-page]').click();
+  await expect(page).toHaveURL(/\/contato\?interesse=/);
+  await expect(page.locator('h1')).toHaveText('Contato');
+  await expect(
+    page.getByRole('radio', { name: 'Outro projeto' }),
+  ).toBeChecked();
+});
+
+test('contact form validates, preserves data on failure and confirms a retry', async ({
+  page,
+}) => {
+  const requests = [];
+  await page.route(/\/api\/(?:public\/)?contact$/, async (route) => {
+    requests.push(route.request().postDataJSON());
+    await route.fulfill({
+      json:
+        requests.length === 1
+          ? { data: {} }
+          : { data: { saved: true, sent: false } },
+    });
+  });
+  await page.goto('/contato?interesse=Aplicativos');
+  await expect(
+    page.getByRole('radio', { name: 'Aplicativos', exact: true }),
+  ).toBeChecked();
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
+  await expect(page.locator('#contact-name')).toBeFocused();
   await page.locator('#contact-name').fill('João <script>alert(1)</script>');
   await page.locator('#contact-email').fill('invalid');
   await page
     .locator('#contact-context')
-    .fill('Preciso de um painel de indicadores.');
-  await page.getByRole('button', { name: 'Continuar', exact: true }).click();
+    .fill('Preciso de um aplicativo para meus clientes.');
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
   await expect(page.locator('#contact-email')).toBeFocused();
   await page.locator('#contact-email').fill('joao@example.com');
-  await page.getByRole('button', { name: 'Continuar', exact: true }).click();
-  await expect(page.locator('#message-preview')).toHaveValue(
-    /Interesse: Dashboard/,
+  await page.locator('#contact-phone').fill('123');
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
+  await expect(page.locator('#contact-phone')).toBeFocused();
+  await page.locator('#contact-phone').fill('(11) 99999-9999');
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
+  await expect(page.locator('#form-feedback')).toContainText(
+    'Não foi possível confirmar o envio',
   );
-  await expect(page.locator('#message-preview')).toHaveValue(
-    /<script>alert\(1\)<\/script>/,
+  await expect(page.locator('[data-contact-success]')).toBeHidden();
+  await expect(page.locator('#contact-name')).toHaveValue(
+    'João <script>alert(1)</script>',
   );
-  const mail = new URL(
-    await page.locator('#message-email').getAttribute('href'),
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
+  await expect(page.locator('[data-contact-success]')).toBeVisible();
+  await expect(page.locator('#contact-success-title')).toBeFocused();
+  expect(requests).toHaveLength(2);
+  expect(requests[0]).toEqual(requests[1]);
+  expect(requests[1]).toMatchObject({
+    kind: 'contact',
+    topic: 'Aplicativos',
+    email: 'joao@example.com',
+  });
+});
+
+test('contact form waits for delivery confirmation and prevents repeat submissions', async ({
+  page,
+}) => {
+  let release;
+  let requests = 0;
+  await page.route(/\/api\/(?:public\/)?contact$/, async (route) => {
+    requests++;
+    expect(route.request().headers()['x-askora-request']).toBe('1');
+    expect(route.request().headers().cookie).toBeUndefined();
+    await new Promise((resolve) => {
+      release = resolve;
+    });
+    await route.fulfill({ json: { data: { sent: true } } });
+  });
+  await page.goto('/contato?interesse=Websites');
+  await page.locator('#contact-name').fill('Ana Silva');
+  await page.locator('#contact-email').fill('ana@example.test');
+  await page
+    .locator('#contact-context')
+    .fill('Preciso de um website para minha empresa.');
+  await page
+    .getByRole('button', { name: 'Solicitar contato', exact: true })
+    .click();
+  await expect(page.locator('#project-form')).toHaveAttribute(
+    'aria-busy',
+    'true',
   );
-  expect(mail.searchParams.get('body')).toContain('joao@example.com');
-  await page.getByRole('button', { name: 'Editar informações' }).click();
-  await expect(page.locator('#contact-email')).toHaveValue('joao@example.com');
-  await page.keyboard.press('Escape');
-  await expect(dialog).not.toBeVisible();
-  await page.locator('.hero-actions [data-open-project]').click();
-  await expect(page.locator('#contact-type')).toHaveValue('Projeto sob medida');
+  await expect(page.getByRole('button', { name: 'Enviando…' })).toBeDisabled();
+  await expect(page.locator('[data-contact-success]')).toBeHidden();
+  await page
+    .locator('#project-form')
+    .evaluate((form) =>
+      form.dispatchEvent(
+        new Event('submit', { bubbles: true, cancelable: true }),
+      ),
+    );
+  await expect.poll(() => requests).toBe(1);
+  release();
+  await expect(page.locator('[data-contact-success]')).toBeVisible();
+  expect(requests).toBe(1);
 });
 
 test('dialog focus, privacy and mobile menu', async ({ page, isMobile }) => {
@@ -149,16 +278,13 @@ test('no accessibility violations in page, each tab and dialog steps', async ({
     expect(contrast.violations).toEqual([]);
   };
   await audit();
-  for (const tab of ['dashboards', 'automacoes', 'sites']) {
+  for (const tab of ['apps', 'sistemas', 'mais']) {
     await page.locator(`#tab-${tab}`).click();
     await audit();
   }
   await page.locator('.hero-actions [data-open-project]').click();
   await audit();
-  await page.locator('#contact-name').fill('Maria');
-  await page.locator('#contact-email').fill('maria@example.com');
-  await page.locator('#contact-context').fill('Preciso desenvolver um site.');
-  await page.getByRole('button', { name: 'Continuar', exact: true }).click();
+  await page.locator('[data-contact-page]').click();
   await audit();
 });
 
@@ -176,6 +302,7 @@ test('layout fits widths from 320 to 1920 pixels', async ({ page }) => {
 test('circuit honors reduced motion and resumes only on explicit request', async ({
   page,
 }) => {
+  await page.goto('/reestruturacao');
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(page.locator('[data-signal-scene]')).toHaveAttribute(
     'data-paused',
@@ -210,19 +337,19 @@ test('content and direct contact survive unavailable JavaScript', async ({
   await expect(page.locator('#main-navigation')).toBeVisible();
   await expect(
     page.locator('.hero-actions [data-open-project]'),
-  ).toHaveAttribute('href', 'mailto:contato@askora.com.br');
+  ).toHaveAttribute('href', '/contato');
   await context.close();
 });
 
-test('canvas failure preserves SVG fallback and functional contact', async ({
+test('canvas failure preserves the vector character and functional contact', async ({
   page,
 }) => {
   await page.addInitScript(() => {
     HTMLCanvasElement.prototype.getContext = () => null;
   });
   await page.reload();
-  await expect(page.locator('.signal-fallback')).toBeVisible();
-  await expect(page.getByRole('switch')).toBeDisabled();
+  await expect(page.locator('.mascot-portrait')).toBeVisible();
+  await expect(page.locator('[data-signal-scene]')).toHaveCount(0);
   await page.locator('.hero-actions [data-open-project]').click();
   await expect(page.locator('#project-dialog')).toBeVisible();
 });
@@ -238,5 +365,5 @@ test('failed module download restores readable services and direct contact', asy
   await expect(page.locator('#panel-sites')).toBeVisible();
   await expect(
     page.locator('.hero-actions [data-open-project]'),
-  ).toHaveAttribute('href', 'mailto:contato@askora.com.br');
+  ).toHaveAttribute('href', '/contato');
 });

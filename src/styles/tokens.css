@@ -3,6 +3,7 @@
   color-scheme: light;
   --paper: #fafaf8;
   --surface: #ffffff;
+  --closing-paper: #f8fafc;
   --ink: #101214;
   --muted: #61666c;
   --quiet: #767b82;
@@ -11,10 +12,28 @@
   --night: #111315;
   --night-raised: #1a1c1f;
   --night-line: #303338;
-  --blue: #1fe1e7;
-  --blue-dark: #087b7f;
-  --blue-light: #b8f5f3;
-  --cyan: #1fe1e7;
+  /* Official Askora public/src/assets/css/tokens.css palette. */
+  --accent: #00e8f8;
+  --accent-base: #00d8f8;
+  --accent-mid: #3ff3f9;
+  --accent-pale: #68f0f8;
+  --accent-light: #98f8f8;
+  --accent-soft: #a8f8f8;
+  --accent-ink: #006970;
+  --accent-wash: color-mix(in srgb, var(--accent) 9%, var(--paper));
+  --accent-gradient: linear-gradient(
+    135deg,
+    var(--accent-base) 0%,
+    var(--accent) 20%,
+    var(--accent-mid) 40%,
+    var(--accent-pale) 60%,
+    var(--accent-light) 80%,
+    var(--accent-soft) 100%
+  );
+  --blue: var(--accent);
+  --blue-dark: var(--accent-ink);
+  --blue-light: var(--accent-soft);
+  --cyan: var(--accent);
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --wrap: 1120px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);

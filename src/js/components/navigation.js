@@ -3,7 +3,7 @@ export function initNavigation() {
   document.documentElement.classList.add('navigation-ready');
   const nav = $('#main-navigation');
   const menu = $('.mobile-menu-toggle');
-  const desktop = matchMedia('(min-width: 901px)');
+  const desktop = matchMedia('(min-width: 981px)');
   function closeMenu(restore = false) {
     nav.classList.remove('open');
     menu.setAttribute('aria-expanded', 'false');

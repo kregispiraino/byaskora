@@ -6,26 +6,7 @@ export function initDialogs({ closeMenu, nav, menu, desktop }) {
   )
     document.documentElement.classList.add('dialogs-ready');
   const inquiry = $('#project-dialog');
-  const formView = $('#project-form-view');
-  const reviewView = $('#project-review-view');
   const openers = new WeakMap();
-  function showStep(review) {
-    formView.hidden = review;
-    reviewView.hidden = !review;
-    inquiry.setAttribute(
-      'aria-labelledby',
-      review ? 'message-title' : 'project-dialog-title',
-    );
-    inquiry.setAttribute(
-      'aria-describedby',
-      review ? 'message-description' : 'project-dialog-description',
-    );
-    inquiry.scrollTop = 0;
-    if (inquiry.open)
-      $(review ? '#message-title' : '#project-dialog-title').focus({
-        preventScroll: true,
-      });
-  }
   function openDialog(dialog, opener) {
     if (!dialog || dialog.open || typeof dialog.showModal !== 'function')
       return;
@@ -42,8 +23,12 @@ export function initDialogs({ closeMenu, nav, menu, desktop }) {
     link.addEventListener('click', (e) => {
       if (typeof inquiry.showModal !== 'function') return;
       e.preventDefault();
-      $('#contact-type').value = link.dataset.interest || 'Projeto sob medida';
-      showStep(false);
+      const interest =
+        link.dataset.interest ||
+        document.body.dataset.interest ||
+        'Projeto sob medida';
+      $('[data-contact-page]').href =
+        `/contato?interesse=${encodeURIComponent(interest)}`;
       openDialog(inquiry, link);
     }),
   );
@@ -108,6 +93,4 @@ export function initDialogs({ closeMenu, nav, menu, desktop }) {
       button.addEventListener('click', () => dialog.close()),
     );
   });
-
-  return { showStep };
 }

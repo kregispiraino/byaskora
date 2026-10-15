@@ -1,0 +1,50 @@
+[
+  {
+    "id": "askora",
+    "name": "Askora",
+    "context": "Performance comercial",
+    "headline": "Um produto inteiro. Uma experiência conectada.",
+    "description": "Do website ao aplicativo, desenvolvemos o ecossistema Askora: gestão de metas e comissões, inteligência artificial e análise de performance. Uma visão de produto que conecta a operação da empresa à rotina de cada vendedor.",
+    "scope": "Website · Plataforma · Aplicativo · IA",
+    "image": "askora.webp",
+    "imageAlt": "Landing page do Askora com a apresentação do produto e sua demonstração de gestão comercial",
+    "website": "https://askora.com.br/",
+    "system": null
+  },
+  {
+    "id": "osler",
+    "name": "Osler Medicina",
+    "context": "Educação médica",
+    "headline": "Tecnologia que acompanha a evolução de quem estuda.",
+    "description": "Uma plataforma de estudos online que aproxima conteúdo, prática e acompanhamento. Website e ambiente de aprendizagem conectados para organizar a jornada do aluno, das questões e revisões à leitura do próprio desempenho.",
+    "scope": "Experiência de estudo · Plataforma de aprendizagem",
+    "image": "osler.webp",
+    "imageAlt": "Website da Osler Medicina com a apresentação da plataforma de educação médica",
+    "website": "/projetos/osler/website/",
+    "system": null
+  },
+  {
+    "id": "aml",
+    "name": "AML Reputacional",
+    "context": "Gestão e operação",
+    "headline": "Processos claros para uma operação exigente.",
+    "description": "Uma presença digital à altura da atuação em risco e reputação, acompanhada de um workflow administrativo sob medida. Etapas, responsáveis e andamento organizados para dar continuidade às demandas e visibilidade à rotina da equipe.",
+    "scope": "Workflow administrativo · Organização de processos",
+    "image": "aml.webp",
+    "imageAlt": "Website da AML Reputacional com sua identidade visual e apresentação de gestão de riscos",
+    "website": "/projetos/aml/website/",
+    "system": false
+  },
+  {
+    "id": "gear-seo",
+    "name": "Gear SEO",
+    "context": "Inteligência de marketing",
+    "headline": "Dados de tráfego com contexto para decidir.",
+    "description": "Desenvolvemos o website e um sistema de análise para a gestão de tráfego. A experiência reúne indicadores e acompanhamento de performance, trazendo clareza para avaliar a evolução dos projetos e orientar as próximas ações da equipe.",
+    "scope": "Análise de tráfego · Indicadores de performance",
+    "image": "gear-seo.webp",
+    "imageAlt": "Website da Gear SEO apresentando sua operação de estratégia, dados e crescimento orgânico",
+    "website": "/projetos/gear-seo/website/",
+    "system": false
+  }
+]

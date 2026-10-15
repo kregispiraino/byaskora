@@ -1,0 +1,94 @@
+/* Shared CTA: Askora's cyan atmosphere and compact typography, ByAskora identity. */
+.closing-section {
+  background: var(--closing-paper);
+}
+.closing-atmosphere {
+  mask-image: linear-gradient(to bottom, transparent, #000 45%);
+  background:
+    radial-gradient(
+      ellipse at 14% 92%,
+      rgba(0, 232, 248, 0.86) 0,
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse at 84% 100%,
+      rgba(168, 248, 248, 0.82) 0,
+      transparent 51%
+    ),
+    radial-gradient(
+      ellipse at 55% 78%,
+      rgba(104, 240, 248, 0.72) 0,
+      transparent 56%
+    ),
+    linear-gradient(180deg, var(--closing-paper) 0%, #f6f8fb 100%);
+}
+.closing-content {
+  padding-block: 47px 56px;
+}
+.closing-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.closing-mark img {
+  width: 29px;
+  height: 40px;
+}
+.closing-content h2 {
+  font-size: 36px;
+  max-width: 650px;
+  margin-inline: auto;
+  letter-spacing: -0.045em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.closing-content > p {
+  font-size: 13px;
+  color: #4e626a;
+  margin: 17px auto 0;
+  max-width: 500px;
+}
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px 28px;
+  margin-top: 25px;
+}
+.closing-actions .button {
+  min-height: 45px;
+  font-size: 12px;
+  padding: 12px 19px;
+  gap: 20px;
+}
+.closing-actions .text-link {
+  font-size: 11px;
+}
+.closing-micro {
+  display: block;
+  color: #4e626a;
+  font-size: 9px;
+  margin-top: 20px;
+}
+@media (max-width: 640px) {
+  .closing-content {
+    padding-block: 41px 47px;
+  }
+  .closing-content h2 {
+    font-size: clamp(25px, 7vw, 32px);
+  }
+  .closing-content > p {
+    font-size: 11px;
+    max-width: 290px;
+  }
+  .closing-mark img {
+    width: 25px;
+    height: 35px;
+  }
+  .closing-micro {
+    max-width: 270px;
+    margin-inline: auto;
+  }
+}

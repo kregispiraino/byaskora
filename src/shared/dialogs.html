@@ -1,5 +1,5 @@
 <dialog
-  class="content-dialog inquiry-dialog"
+  class="content-dialog contact-dialog"
   id="project-dialog"
   aria-labelledby="project-dialog-title"
   aria-describedby="project-dialog-description"
@@ -8,130 +8,38 @@
     class="dialog-close"
     type="button"
     data-close-dialog
-    aria-label="Fechar formulário"
+    aria-label="Fechar conversa"
   >
     {{icon:close}}
   </button>
-  <div id="project-form-view">
-    <h2 id="project-dialog-title" tabindex="-1">Vamos conversar.</h2>
-    <p class="dialog-deck" id="project-dialog-description">
-      Conte um pouco sobre o que você tem em mente.
-    </p>
-    <form id="project-form" novalidate>
-      <input
-        id="contact-type"
-        name="type"
-        type="hidden"
-        value="Projeto sob medida"
-      />
-      <div class="form-row">
-        <div class="field">
-          <label for="contact-name">Seu nome</label
-          ><input
-            id="contact-name"
-            name="name"
-            type="text"
-            autocomplete="name"
-            required
-            maxlength="100"
-            aria-describedby="error-name"
-          /><span class="field-error" id="error-name"></span>
-        </div>
-        <div class="field">
-          <label for="contact-company"
-            >Empresa <span class="optional">opcional</span></label
-          ><input
-            id="contact-company"
-            name="company"
-            type="text"
-            autocomplete="organization"
-            maxlength="150"
-            aria-describedby="error-company"
-          /><span class="field-error" id="error-company"></span>
-        </div>
-      </div>
-      <div class="field">
-        <label for="contact-email">Seu e-mail</label
-        ><input
-          id="contact-email"
-          name="email"
-          type="email"
-          autocomplete="email"
-          inputmode="email"
-          required
-          maxlength="200"
-          placeholder="voce@empresa.com.br"
-          aria-describedby="error-email"
-        /><span class="field-error" id="error-email"></span>
-      </div>
-      <div class="field">
-        <label for="contact-context"
-          >O que você precisa desenvolver ou melhorar?</label
-        ><textarea
-          id="contact-context"
-          name="context"
-          rows="3"
-          placeholder="Não precisa usar termos técnicos."
-          required
-          minlength="15"
-          maxlength="3000"
-          aria-describedby="error-context"
-        ></textarea
-        ><span class="field-error" id="error-context"></span>
-      </div>
-      <button class="button button-dark form-submit" type="submit">
-        Continuar {{icon:arrow}}
-      </button>
-      <p class="form-disclosure">
-        Você revisa a mensagem antes de enviar. Não inclua dados confidenciais.
-      </p>
-      <p
-        class="form-feedback"
-        id="form-feedback"
-        role="status"
-        aria-live="polite"
-      ></p>
-    </form>
-    <p class="form-direct">
-      Prefere falar direto?
-      <a href="{{whatsapp}}" target="_blank" rel="noopener noreferrer"
-        >Abrir WhatsApp {{icon:arrow-up}}</a
-      >
-    </p>
+  <div class="dialog-brand" aria-hidden="true">
+    <img
+      src="/assets/images/askora-mark-black.webp"
+      width="32"
+      height="44"
+      alt=""
+    />
   </div>
-  <div id="project-review-view" hidden>
-    <button class="dialog-back" type="button" id="edit-message">
-      {{icon:arrow}} Editar informações
-    </button>
-    <h2 id="message-title" tabindex="-1">Tudo certo?</h2>
-    <p class="dialog-deck" id="message-description">
-      Revise sua mensagem e escolha como enviar.
-    </p>
-    <label class="sr-only" for="message-preview">Mensagem preparada</label
-    ><textarea id="message-preview" readonly rows="7"></textarea>
-    <div class="message-actions">
-      <a id="message-email" class="button button-dark" href="mailto:{{email}}"
-        >Abrir meu e-mail {{icon:arrow-up}}</a
-      ><button id="copy-message" class="button button-outline" type="button">
-        Copiar mensagem {{icon:copy}}
-      </button>
-    </div>
-    <p class="message-whatsapp">
-      Para enviar pelo WhatsApp, copie a mensagem e
-      <a href="{{whatsapp}}" target="_blank" rel="noopener noreferrer"
-        >abra a conversa {{icon:arrow-up}}</a
-      >.
-    </p>
-    <p
-      id="copy-feedback"
-      class="copy-feedback"
-      role="status"
-      aria-live="polite"
-    ></p>
-    <p class="message-mail-note">
-      Nada foi enviado ainda. O envio é confirmado no seu e-mail ou WhatsApp.
-    </p>
-  </div>
+  <p class="contact-dialog-eyebrow">VAMOS CONHECER O SEU PROJETO</p>
+  <h2 id="project-dialog-title" tabindex="-1">
+    O que você quer<br />colocar em movimento?
+  </h2>
+  <p class="dialog-deck" id="project-dialog-description">
+    Conte sua ideia, o que precisa melhorar e como podemos ajudar o seu negócio
+    a dar o próximo passo.
+  </p>
+  <a
+    class="button button-dark"
+    href="{{whatsapp}}"
+    target="_blank"
+    rel="noopener noreferrer"
+    >{{icon:whatsapp}} Conversar pelo WhatsApp {{icon:arrow-up}}</a
+  >
+  <a class="button button-outline" href="/contato" data-contact-page
+    >Solicitar contato pelo site {{icon:arrow}}</a
+  >
+  <a class="dialog-email" href="mailto:{{email}}">Ou escreva para {{email}}</a>
+  <small>Escolha o canal de sua preferência para conversar com a equipe.</small>
 </dialog>
 <dialog
   class="content-dialog privacy-dialog"
@@ -149,14 +57,18 @@
   <h2 id="privacy-title" tabindex="-1">Privacidade.</h2>
   <div class="dialog-article">
     <p>
-      A mensagem é preparada no seu navegador. Esta página não envia os campos
-      para um servidor, não usa rastreamento e não guarda o formulário em
-      armazenamento local.
+      Os dados informados no formulário são usados para responder à sua
+      solicitação de contato. Não guardamos o preenchimento em armazenamento
+      local do navegador.
     </p>
     <p>
-      Ao continuar por e-mail ou WhatsApp, você decide o envio em um serviço
-      externo. As informações compartilhadas seguem também as condições desse
-      serviço.
+      Ao escolher e-mail ou WhatsApp, a conversa continua em um serviço externo.
+      As informações compartilhadas seguem também as condições desse serviço.
+    </p>
+    <p>
+      As mensagens do chat são enviadas ao Gemini, do Google, para gerar as
+      respostas. O site mantém a conversa na memória da página, sem gravá-la no
+      armazenamento do navegador ou em banco de dados próprio.
     </p>
     <p>
       Este aviso descreve o funcionamento deste site. Para informações sobre o

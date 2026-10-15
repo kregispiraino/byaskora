@@ -1,0 +1,638 @@
+/* A compact, self-contained phone. Each area occupies a single screen. */
+.service-hero .app-scene {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+.app-phone {
+  position: relative;
+  width: 292px;
+  max-width: 100%;
+  padding: 7px;
+  border: 1px solid #62676a;
+  border-radius: 39px;
+  background: linear-gradient(
+    125deg,
+    #8a8e91,
+    #202224 20%,
+    #101214 75%,
+    #777c80
+  );
+  box-shadow:
+    0 14px 28px -18px #10121455,
+    inset 0 0 0 2px #ffffff30;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+.app-phone::before,
+.app-phone::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  border-radius: 2px;
+  background: #45494b;
+}
+.app-phone::before {
+  top: 97px;
+  height: 36px;
+  left: -3px;
+}
+.app-phone::after {
+  top: 125px;
+  height: 51px;
+  right: -3px;
+}
+.app-display {
+  overflow: clip;
+  border-radius: 31px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.app-display .icon {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+.app-display button {
+  font-family: inherit;
+}
+.app-display :focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+.app-device-status {
+  position: relative;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 20px 0;
+  font-size: 9px;
+  font-weight: 600;
+}
+.app-island {
+  position: absolute;
+  width: 74px;
+  height: 20px;
+  left: calc(50% - 37px);
+  top: 7px;
+  border-radius: 20px;
+  background: #0b0c0d;
+}
+.app-island::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  right: 9px;
+  top: 7px;
+  border-radius: 50%;
+  background: #23282c;
+  box-shadow: inset 0 0 0 1px #171a1e;
+}
+.app-device-signals {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.app-device-signals > svg {
+  width: 12px;
+  height: 10px;
+}
+.app-device-signals > i {
+  width: 17px;
+  height: 9px;
+  padding: 1px;
+  border: 1px solid #707477;
+  border-radius: 3px;
+}
+.app-device-signals > i::after {
+  content: '';
+  display: block;
+  width: 11px;
+  height: 5px;
+  background: var(--ink);
+  border-radius: 1px;
+}
+.app-header {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 18px;
+  border-bottom: 1px solid #eceeef;
+}
+.app-wordmark {
+  font-size: 21px;
+  letter-spacing: -0.07em;
+  font-weight: 650;
+}
+.app-wordmark > span {
+  color: var(--accent-ink);
+}
+.app-profile {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #e3e6e7;
+  border-radius: 50%;
+  background: #f6f7f7;
+  font-size: 8px;
+  font-weight: 550;
+}
+.app-viewport {
+  height: 354px;
+  padding: 15px 18px 12px;
+  overflow: clip;
+}
+.app-panel {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.app-panel[hidden] {
+  display: none;
+}
+.app-panel:not([hidden]) {
+  animation: app-screen-in 0.34s var(--ease) both;
+}
+.app-intro > p {
+  color: var(--muted);
+  font-size: 10px;
+  margin: 0 0 5px;
+}
+.app-display h2 {
+  font-size: 27px;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+  font-weight: 550;
+  margin: 0;
+}
+.app-intro > span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  margin-top: 5px;
+}
+.app-display h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 550;
+  line-height: 1.4;
+}
+.app-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.app-section-heading > span,
+.app-section-heading h3 > span {
+  font-size: 9px;
+  font-weight: 400;
+  color: var(--muted);
+}
+.app-section-heading > .icon {
+  width: 14px;
+  height: 14px;
+  color: var(--muted);
+}
+.app-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+.app-days,
+.app-times {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+.app-days button,
+.app-times button {
+  border: 1px solid #dfe3e5;
+  border-radius: 9px;
+  background: #fff;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+.app-days button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  height: 57px;
+}
+.app-days span {
+  font-size: 8px;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+.app-days strong {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1;
+}
+.app-times button {
+  min-height: 44px;
+  font-size: 11px;
+}
+.app-days button[aria-pressed='true'],
+.app-times button[aria-pressed='true'] {
+  background: #171b1e;
+  color: #fff;
+  border-color: #171b1e;
+  box-shadow: inset 0 -2px var(--accent);
+}
+.app-days button[aria-pressed='true'] span {
+  color: #ced3d6;
+}
+.app-days button:active,
+.app-times button:active {
+  transform: scale(0.96);
+}
+.app-panel-action {
+  margin-top: auto;
+}
+.app-display .app-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 13px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: #171b1e;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+.app-display .app-button:hover {
+  background: #30373b;
+}
+.app-display .app-button:active {
+  transform: scale(0.98);
+}
+.app-display .app-button:disabled {
+  background: #edf0f1;
+  color: #62696d;
+  cursor: default;
+  transform: none;
+}
+.app-display .app-button[data-confirmed='true'] {
+  background: #eaf5f7;
+  color: #176778;
+}
+.app-action-note {
+  min-height: 14px;
+  text-align: center;
+  margin: 8px 0 0;
+  font-size: 9px;
+  color: var(--muted);
+}
+.app-action-note[data-success='true'] {
+  color: #176778;
+}
+.app-work {
+  margin-top: -2px;
+}
+.app-task-list {
+  display: flex;
+  flex-direction: column;
+}
+.app-task {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  position: relative;
+  min-height: 44px;
+  cursor: pointer;
+  font-size: 11px;
+}
+.app-task + .app-task {
+  border-top: 1px solid #edf0f1;
+}
+.app-task input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  left: 0;
+  margin: 0;
+}
+.app-task-check {
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  border-radius: 6px;
+  border: 1px solid #a0a8ae;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.app-task-check .icon {
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+.app-task input:checked + .app-task-check {
+  pointer-events: none;
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--accent);
+}
+.app-task input:checked + .app-task-check .icon {
+  opacity: 1;
+  transform: scale(1);
+}
+.app-task input:focus-visible + .app-task-check {
+  pointer-events: none;
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+.app-task input:disabled ~ span {
+  cursor: default;
+}
+.app-task-progress {
+  margin-top: 6px;
+}
+.app-task-track {
+  height: 3px;
+  background: #e7ebed;
+  border-radius: 3px;
+  margin-top: 7px;
+  overflow: hidden;
+}
+.app-task-track i {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--accent-ink);
+  transition: width 0.28s var(--ease);
+}
+.app-pill::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background: var(--accent-ink);
+  border-radius: 50%;
+}
+#app-panel-gestao {
+  gap: 13px;
+}
+.app-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-block: 2px;
+}
+.app-metrics > div + div {
+  border-left: 1px solid #e5e9eb;
+  padding-left: 20px;
+}
+.app-metrics strong {
+  display: block;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.app-metrics span {
+  display: block;
+  margin-top: 5px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.app-approval {
+  padding: 12px;
+  background: #f6f7f7;
+  border: 1px solid #e8eced;
+  border-radius: 12px;
+}
+.app-approval > p {
+  font-size: 9px;
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+.app-approval-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+}
+.app-approval-bottom > strong {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
+}
+.app-approval-bottom > strong span {
+  font-size: 13px;
+}
+.app-approval-bottom > button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 9px;
+  border-radius: 8px;
+  background: #171b1e;
+  color: #fff;
+  font-size: 10px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.app-approval-bottom > button .icon {
+  width: 13px;
+  height: 13px;
+}
+.app-approval-bottom > button:disabled {
+  background: #e4eef0;
+  color: #176778;
+  cursor: default;
+}
+.app-appointment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 2px;
+}
+.app-date-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 38px;
+  flex: 0 0 34px;
+  border: 1px solid #e2e7e9;
+  border-radius: 8px;
+  font-size: 8px;
+  color: var(--muted);
+}
+.app-date-tile b {
+  font-size: 16px;
+  font-weight: 550;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.app-appointment strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 550;
+}
+.app-appointment small {
+  display: block;
+  margin-top: 4px;
+  font-size: 9px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.app-bottom-nav {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 6px 12px 4px;
+  border-top: 1px solid #eceeef;
+  background: white;
+}
+.app-bottom-nav::before {
+  content: '';
+  position: absolute;
+  inset: 6px auto 4px 12px;
+  width: calc((100% - 24px) / 3);
+  border-radius: 10px;
+  background: #f1f4f4;
+  transform: translateX(calc(var(--app-tab-index, 0) * 100%));
+  transition: transform 0.34s var(--ease);
+}
+.app-bottom-nav > button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 9px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.app-bottom-nav > button[aria-selected='true'] {
+  color: var(--ink);
+  font-weight: 650;
+}
+.app-bottom-nav > button[aria-selected='true'] .icon {
+  color: var(--accent-ink);
+}
+.app-bottom-nav .icon {
+  width: 17px;
+  height: 17px;
+}
+.app-home-indicator {
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-home-indicator::after {
+  content: '';
+  width: 82px;
+  height: 3px;
+  border-radius: 3px;
+  background: #17191b;
+}
+@keyframes app-screen-in {
+  from {
+    opacity: 0;
+    transform: translateX(var(--app-enter-offset, 16px));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 640px), (max-height: 760px) {
+  .app-phone {
+    width: 280px;
+  }
+  .app-viewport {
+    height: 344px;
+    padding-inline: 16px;
+  }
+  .app-header {
+    margin-inline: 16px;
+  }
+}
+/* Keep the entire device usable below a fixed header on shorter phones. */
+@media (max-height: 640px) {
+  .app-phone {
+    width: 268px;
+    padding: 6px;
+  }
+  .app-device-status {
+    height: 29px;
+  }
+  .app-header {
+    height: 38px;
+  }
+  .app-viewport {
+    height: 330px;
+    padding-block: 10px 12px;
+  }
+  .app-panel,
+  #app-panel-gestao {
+    gap: 8px;
+  }
+  .app-display h2 {
+    font-size: 25px;
+  }
+  .app-bottom-nav {
+    padding-block: 4px 2px;
+  }
+  .app-bottom-nav::before {
+    top: 4px;
+    bottom: 2px;
+  }
+  .app-home-indicator {
+    height: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .app-panel:not([hidden]) {
+    animation: none;
+  }
+  .app-display *,
+  .app-bottom-nav::before {
+    transition: none !important;
+  }
+}
