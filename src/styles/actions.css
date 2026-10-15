@@ -12,6 +12,7 @@
   .closing-actions > a {
     width: min(280px, 100%);
     min-height: 44px;
+    justify-content: center;
     text-align: center;
   }
   .project-actions {
