@@ -122,7 +122,7 @@ test('static pillar previews link to services; E mais opens the contact chooser'
   await expect(dialog).toBeVisible();
   await expect(dialog.getByRole('link', { name: /WhatsApp/ })).toHaveAttribute(
     'href',
-    'https://wa.me/551151977551?text=Ol%C3%A1%20%F0%9F%91%8B%20Falo%20com%20o%20time%20Askora%3F',
+    'https://wa.me/551151977551?text=Ol%C3%A1%20%F0%9F%91%8B%20Falo%20com%20o%20time%20Askora',
   );
   await expect(dialog.locator('form')).toHaveCount(0);
   await dialog.locator('[data-contact-page]').click();
