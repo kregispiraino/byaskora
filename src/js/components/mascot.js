@@ -7,6 +7,10 @@ export function initMascot() {
   const eyelids = host.querySelector('[data-mascot-eyelids]');
   const shadow = host.querySelector('[data-mascot-shadow]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const mobile = matchMedia(
+    '(max-width: 640px), (hover: none) and (pointer: coarse)',
+  );
+  const selector = document.querySelector('.solution-selector');
   const target = { x: 0, y: 0 };
   const look = { x: 0, y: 0 };
   const pose = { x: 0, y: 0 };
@@ -16,7 +20,6 @@ export function initMascot() {
   let previous = 0;
   let elapsed = 0;
   let blinkAt = 3.4;
-  let touchRelease;
   const clamp = (value) => Math.max(-1, Math.min(1, value));
   const active = () => visible && !reduced.matches && !document.hidden;
 
@@ -68,11 +71,35 @@ export function initMascot() {
     target.x = 0;
     target.y = 0;
   }
+  function rest() {
+    const tab = mobile.matches
+      ? selector?.querySelector('[aria-selected="true"]')
+      : null;
+    if (tab) {
+      const tabRect = tab.getBoundingClientRect();
+      target.x = clamp(
+        (tabRect.left + tabRect.width / 2 - rect.left - rect.width / 2) /
+          Math.max(140, rect.width / 2),
+      );
+      target.y = clamp(
+        (tabRect.top + tabRect.height / 2 - rect.top - rect.height * 0.46) /
+          Math.max(180, innerHeight * 0.32),
+      );
+    } else neutral();
+    // Reduced motion keeps the selected direction, without an animated transition.
+    if (reduced.matches) {
+      look.x = pose.x = target.x;
+      look.y = pose.y = target.y;
+      elapsed = 0;
+      paint();
+    }
+  }
   function measure() {
     rect = host.getBoundingClientRect();
+    rest();
   }
   function follow(event) {
-    if (!active()) return;
+    if (!active() || mobile.matches) return;
     if (event.pointerType === 'touch' && !host.contains(event.target)) return;
     target.x = clamp(
       (event.clientX - rect.left - rect.width / 2) /
@@ -86,44 +113,31 @@ export function initMascot() {
   function sync() {
     stop();
     host.dataset.paused = String(reduced.matches);
-    if (reduced.matches) {
-      neutral();
-      look.x = look.y = pose.x = pose.y = elapsed = 0;
-      paint();
-    }
+    measure();
     wake();
   }
+  selector?.addEventListener('solutionchange', () => {
+    if (!mobile.matches) return;
+    measure();
+    wake();
+  });
   window.addEventListener('pointermove', follow, { passive: true });
   host.addEventListener(
     'pointerdown',
     (event) => {
-      clearTimeout(touchRelease);
       follow(event);
       if (active()) blinkAt = elapsed + 0.12;
     },
     { passive: true },
   );
-  const release = (event) => {
-    if (event.pointerType === 'touch') touchRelease = setTimeout(neutral, 900);
-  };
-  host.addEventListener('pointerup', release, { passive: true });
-  host.addEventListener('pointercancel', neutral, { passive: true });
-  document.documentElement.addEventListener('pointerleave', (event) => {
-    // Touch pointers leave the document at finger release; keep that gaze until
-    // the short release timer ends instead of resetting it before the next paint.
-    if (event.pointerType !== 'touch') neutral();
-  });
-  window.addEventListener('blur', neutral);
-  window.addEventListener(
-    'scroll',
-    () => {
-      measure();
-      neutral();
-    },
-    { passive: true },
-  );
+  host.addEventListener('pointercancel', rest, { passive: true });
+  document.documentElement.addEventListener('pointerleave', rest);
+  window.addEventListener('blur', rest);
+  window.addEventListener('scroll', measure, { passive: true });
   window.addEventListener('resize', measure, { passive: true });
-  new ResizeObserver(measure).observe(host);
+  const sizeObserver = new ResizeObserver(measure);
+  sizeObserver.observe(host);
+  if (selector) sizeObserver.observe(selector);
   new IntersectionObserver(
     ([entry]) => {
       visible = entry.isIntersecting;
@@ -131,20 +145,21 @@ export function initMascot() {
         measure();
         wake();
       } else {
-        neutral();
+        rest();
         stop();
       }
     },
     { threshold: 0.1 },
   ).observe(host);
   document.addEventListener('visibilitychange', () => {
-    neutral();
+    rest();
     if (document.hidden) stop();
     else wake();
   });
   window.addEventListener('pagehide', stop);
   window.addEventListener('pageshow', wake);
   reduced.addEventListener('change', sync);
+  mobile.addEventListener('change', sync);
   sync();
   host.dataset.ready = 'true';
 }

@@ -126,7 +126,7 @@ A saída do buscador inicia uma entrada em sequência para título, descrição,
 
 ## Personagem institucional
 
-`src/shared/mascot.html` contém o personagem vetorial preto com olhos ciano; `src/styles/mascot.css` controla suas proporções e `src/js/components/mascot.js` acompanha o mouse com amortecimento separado para olhos e cabeça. No celular, um toque orienta o olhar e depois ele retorna ao centro. O personagem tem piscadas discretas, controle de pausa, suspensão fora da tela e respeito à preferência de movimento reduzido. Continua visível sem JavaScript ou Canvas e não carrega recursos externos. A ilustração do circuito permanece em Reestruturação.
+`src/shared/mascot.html` contém o personagem vetorial preto com olhos ciano; `src/styles/mascot.css` controla suas proporções e `src/js/components/mascot.js` acompanha o mouse com amortecimento separado para olhos e cabeça. No celular e em dispositivos de toque, o olhar acompanha a aba de desenvolvimento selecionada, preservando a direção ao rolar a página. A mudança de aba comunica a seleção ao personagem por um evento local; olhos e cabeça fazem a transição suavemente. Com movimento reduzido, a direção é aplicada sem animação. O personagem tem piscadas discretas e suspensão fora da tela, sem botão de pausa. Continua visível sem JavaScript ou Canvas e não carrega recursos externos. A ilustração do circuito permanece em Reestruturação.
 
 ## Páginas comerciais
 

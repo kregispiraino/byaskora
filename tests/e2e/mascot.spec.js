@@ -3,7 +3,10 @@ import { test, expect } from '@playwright/test';
 const offset = (page) =>
   page.locator('[data-mascot-gaze]').evaluate((element) => {
     const matrix = element.transform.baseVal.consolidate()?.matrix;
-    return { x: matrix?.e || 0, y: matrix?.f || 0 };
+    const center = new DOMPoint(320, 175).matrixTransform(
+      matrix || new DOMMatrix(),
+    );
+    return { x: center.x - 320, y: center.y - 175 };
   });
 
 test.beforeEach(async ({ page }) => {
@@ -16,7 +19,12 @@ test.beforeEach(async ({ page }) => {
 
 test('character follows the pointer, honors motion preferences and rests offscreen', async ({
   page,
+  isMobile,
 }) => {
+  test.skip(
+    isMobile,
+    'Touch devices follow the selected pillar instead of a mouse.',
+  );
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   const stage = page.locator('[data-mascot]');
   const head = page.locator('[data-mascot-head]');
@@ -87,21 +95,43 @@ test('reduced motion keeps the character still and the circuit stays on restruct
   await expect(page.getByRole('switch')).toBeEnabled();
 });
 
-test('touch gives the character a direction and then releases the gaze', async ({
+test('mobile character keeps its gaze on the selected pillar through scrolling and resizing', async ({
   page,
-  isMobile,
 }) => {
-  test.skip(
-    !isMobile,
-    'Native touch interaction is checked in the iPhone project.',
-  );
+  await page.setViewportSize({ width: 390, height: 844 });
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   const stage = page.locator('[data-mascot]');
   await stage.scrollIntoViewIfNeeded();
-  const box = await stage.boundingBox();
-  await page.touchscreen.tap(box.x + 12, box.y + box.height * 0.4);
   await expect.poll(async () => (await offset(page)).x).toBeLessThan(-10);
-  await expect
-    .poll(async () => Math.abs((await offset(page)).x))
-    .toBeLessThan(0.2);
+  await expect.poll(async () => (await offset(page)).y).toBeGreaterThan(10);
+  await page.locator('#tab-mais').click();
+  await expect.poll(async () => (await offset(page)).x).toBeGreaterThan(10);
+  await stage.click();
+  await page.waitForTimeout(1100);
+  await expect.poll(async () => (await offset(page)).x).toBeGreaterThan(10);
+  await page.locator('.site-footer').scrollIntoViewIfNeeded();
+  await stage.scrollIntoViewIfNeeded();
+  await expect.poll(async () => (await offset(page)).x).toBeGreaterThan(10);
+  await page.locator('#tab-mais').focus();
+  await page.keyboard.press('Home');
+  await expect(page.locator('#tab-sites')).toHaveAttribute(
+    'aria-selected',
+    'true',
+  );
+  await stage.scrollIntoViewIfNeeded();
+  await expect.poll(async () => (await offset(page)).x).toBeLessThan(-10);
+  for (const width of [320, 430]) {
+    await page.setViewportSize({ width, height: 844 });
+    await expect.poll(async () => (await offset(page)).x).toBeLessThan(-10);
+  }
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.locator('#tab-mais').click();
+  await expect.poll(async () => (await offset(page)).x).toBeGreaterThan(10);
+  const still = await page
+    .locator('[data-mascot-head]')
+    .getAttribute('transform');
+  await page.waitForTimeout(200);
+  expect(
+    await page.locator('[data-mascot-head]').getAttribute('transform'),
+  ).toBe(still);
 });

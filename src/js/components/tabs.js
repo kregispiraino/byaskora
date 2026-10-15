@@ -24,6 +24,7 @@ export function initTabs() {
       p.hidden = p.id !== tab.getAttribute('aria-controls');
     });
     if (focus) tab.focus({ preventScroll: true });
+    selector.dispatchEvent(new Event('solutionchange'));
   }
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => selectTab(tab));

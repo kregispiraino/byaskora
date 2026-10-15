@@ -1,5 +1,9 @@
 /* Keep primary and secondary actions in the same order on every small screen. */
 @media (max-width: 640px) {
+  .hero-actions .text-link {
+    font-size: 11px;
+    gap: 8px;
+  }
   .hero-actions,
   .service-actions,
   .closing-actions {
