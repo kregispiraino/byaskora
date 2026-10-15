@@ -636,15 +636,6 @@ h2 {
     font-size: 12px;
   }
 }
-@media (max-width: 640px) {
-  .hero-actions {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .hero-actions .button {
-    width: min(280px, 100%);
-  }
-}
 @media (max-width: 540px) {
   main {
     padding-top: 97px;

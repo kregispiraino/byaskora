@@ -1,0 +1,22 @@
+/* Keep primary and secondary actions in the same order on every small screen. */
+@media (max-width: 640px) {
+  .hero-actions,
+  .service-actions,
+  .closing-actions {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  .hero-actions > a,
+  .service-actions > a,
+  .closing-actions > a {
+    width: min(280px, 100%);
+    min-height: 44px;
+    text-align: center;
+  }
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
