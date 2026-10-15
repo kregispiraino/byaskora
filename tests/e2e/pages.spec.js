@@ -56,7 +56,8 @@ test('all ByAskora routes load only their page resources and remain usable', asy
     );
     // Uncompressed production budgets guard against reintroducing every demo on every page.
     expect(assets.js).toBeGreaterThan(0);
-    expect(assets.js).toBeLessThan(25000);
+    // Consent and Ads add ~3 KB to the shared bundle; the circuit page is the largest.
+    expect(assets.js).toBeLessThan(route === 'reestruturacao' ? 28000 : 25000);
     expect(assets.css).toBeGreaterThan(0);
     expect(assets.css).toBeLessThan(65000);
     const documentState = await page.evaluate(() => {

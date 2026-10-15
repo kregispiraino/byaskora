@@ -3,6 +3,9 @@ import { initNavigation } from './components/navigation.js';
 import { initDialogs } from './components/dialogs.js';
 import { initHeroDots } from './components/hero-dots.js';
 
+import { initAnalytics } from './analytics.js';
+
+initAnalytics();
 const navigation = initNavigation();
 initDialogs(navigation);
 

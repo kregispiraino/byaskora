@@ -57,6 +57,10 @@ test('AI returns a contextual CTA and keeps the composer anchored while typing a
   page,
 }) => {
   await page.goto('/ai-solutions');
+  // Measure the composer after the visitor resolves the new consent notice.
+  await page
+    .locator('[data-cookie-notice] [data-cookie-choice="denied"]')
+    .click();
   const input = page.getByRole('textbox', { name: 'Sua mensagem' });
   const composer = page.locator('.ai-composer');
   const before = await composer.boundingBox();

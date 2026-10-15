@@ -1,0 +1,47 @@
+/* Reserve scroll room so the notice never traps footer actions underneath it. */
+body.cookie-choice-pending {
+  padding-bottom: var(--cookie-notice-space, 200px);
+}
+.cookie-notice {
+  position: fixed;
+  z-index: 40;
+  bottom: 16px;
+  right: 16px;
+  width: min(360px, calc(100% - 32px));
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 8px 30px #1012141a;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.cookie-actions button {
+  flex: 1;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+.cookie-actions button:hover {
+  background: var(--accent-wash);
+}
+.cookie-preferences {
+  margin-block: 24px;
+}
+@media print {
+  .cookie-notice {
+    display: none;
+  }
+}

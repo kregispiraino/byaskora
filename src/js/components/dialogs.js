@@ -1,4 +1,7 @@
 import { $, $$ } from '../dom.js';
+import { serviceFromPath, trackWhatsAppConversion } from '../analytics.js';
+
+const initializedDialogs = new WeakSet();
 export function initDialogs({ closeMenu, nav, menu, desktop }) {
   if (
     typeof HTMLDialogElement !== 'undefined' &&
@@ -6,6 +9,9 @@ export function initDialogs({ closeMenu, nav, menu, desktop }) {
   )
     document.documentElement.classList.add('dialogs-ready');
   const inquiry = $('#project-dialog');
+  if (!inquiry || initializedDialogs.has(inquiry)) return;
+  initializedDialogs.add(inquiry);
+  let contactContext = null;
   const openers = new WeakMap();
   function openDialog(dialog, opener) {
     if (!dialog || dialog.open || typeof dialog.showModal !== 'function')
@@ -19,19 +25,52 @@ export function initDialogs({ closeMenu, nav, menu, desktop }) {
     );
     title?.focus({ preventScroll: true });
   }
+  function openContact(link) {
+    if (inquiry.open || typeof inquiry.showModal !== 'function') return;
+    const trigger = link.closest('header')
+      ? 'header'
+      : link.matches('[data-ai-project]')
+        ? 'ai-chat'
+        : link.closest('.closing-section')
+          ? 'cta-inferior'
+          : link.closest('.faq-intro')
+            ? 'faq'
+            : link.closest('.service-hero, .hero')
+              ? 'cta-principal'
+              : link.closest('section[id]')?.id || 'conteudo';
+    contactContext = Object.freeze({
+      service: serviceFromPath(location.pathname),
+      route: location.pathname,
+      trigger,
+    });
+    inquiry.dataset.originService = contactContext.service || '';
+    inquiry.dataset.originRoute = contactContext.route;
+    inquiry.dataset.originTrigger = contactContext.trigger;
+    const interest =
+      link.dataset.interest ||
+      document.body.dataset.interest ||
+      'Projeto sob medida';
+    $('[data-contact-page]').href =
+      `/contato?interesse=${encodeURIComponent(interest)}`;
+    openDialog(inquiry, link);
+  }
   $$('[data-open-project]').forEach((link) =>
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', (event) => {
       if (typeof inquiry.showModal !== 'function') return;
-      e.preventDefault();
-      const interest =
-        link.dataset.interest ||
-        document.body.dataset.interest ||
-        'Projeto sob medida';
-      $('[data-contact-page]').href =
-        `/contato?interesse=${encodeURIComponent(interest)}`;
-      openDialog(inquiry, link);
+      event.preventDefault();
+      openContact(link);
     }),
   );
+  $('[data-whatsapp-conversion]', inquiry)?.addEventListener('click', () => {
+    if (inquiry.open) trackWhatsAppConversion(contactContext);
+  });
+  inquiry.addEventListener('close', () => {
+    if (inquiry.open) return;
+    contactContext = null;
+    delete inquiry.dataset.originService;
+    delete inquiry.dataset.originRoute;
+    delete inquiry.dataset.originTrigger;
+  });
   $$('[data-dialog]').forEach((button) =>
     button.addEventListener('click', () => {
       openDialog(document.getElementById(button.dataset.dialog), button);

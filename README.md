@@ -1,6 +1,6 @@
 # ByAskora
 
-Site institucional de desenvolvimento web, preparado para `https://byaskora.com/` e hospedagem no Railway. HTML estático gerado no build, CSS e JavaScript em módulos, sem framework no navegador, CDN ou fontes externas. O formulário utiliza o serviço de contato compartilhado do Askora. O chat de AI Solutions usa um endpoint próprio de servidor para acessar o Gemini.
+Site institucional de desenvolvimento web, preparado para `https://byaskora.com/` e hospedagem no Railway. HTML estático gerado no build, CSS e JavaScript em módulos, sem framework no navegador ou fontes externas. A tag do Google Ads carrega somente após consentimento. O formulário utiliza o serviço de contato compartilhado do Askora. O chat de AI Solutions usa um endpoint próprio de servidor para acessar o Gemini.
 
 ## Desenvolvimento
 
@@ -209,3 +209,11 @@ O modo de prévia continua disponível apenas quando o endpoint estiver explicit
 `/portifolio` apresenta Askora, Osler Medicina, Gear SEO e AML Reputacional em quatro cards com prints das respectivas landing pages. Fica antes de Contato no menu. Conteúdo em `src/content/portfolio.json`; estrutura e estilos próprios em `src/pages/portifolio.html` e `src/styles/portfolio.css`.
 
 Os três templates de website estão separados em `public/projetos/{osler,gear-seo,aml}/website/`, acessíveis pelos botões “Ver website”. “Ver sistema” fica reservado até a preparação dos templates; o Askora utiliza “Explorar produto” para seu site oficial. Organização, origem e atualização das imagens estão em [docs/PORTFOLIO.md](docs/PORTFOLIO.md).
+
+## Google Ads e WhatsApp
+
+A conversão ocorre **somente no clique em “Conversar pelo WhatsApp” dentro do modal**. Abrir o modal, visitar páginas, enviar formulário ou usar links diretos externos não dispara as cinco conversões. O serviço vem da rota de origem, inclusive pelo header compartilhado. Institucional, Contato e Portfólio não são associados a um serviço.
+
+O aviso de consentimento permite aceitar ou recusar a medição e rever a escolha em **Privacidade**. Sem aceitação, não carregamos a tag nem enfileiramos conversões para envio posterior. Personalização de anúncios permanece desativada. Detalhes, identificadores conferidos na conta e validação em [docs/GOOGLE-ADS.md](docs/GOOGLE-ADS.md).
+
+O controle de consentimento e o rastreamento acrescentam aproximadamente 3 KB ao JavaScript compartilhado. O limite de teste de Reestruturação passa a 28 KB; as demais páginas mantêm 25 KB. Os números da revisão anterior acima são históricos.

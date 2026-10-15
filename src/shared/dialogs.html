@@ -31,6 +31,7 @@
   <a
     class="button button-dark"
     href="{{whatsapp}}"
+    data-whatsapp-conversion
     target="_blank"
     rel="noopener noreferrer"
     >{{icon:whatsapp}} Conversar pelo WhatsApp {{icon:arrow-up}}</a
@@ -82,6 +83,40 @@
       rel="noopener noreferrer"
       >Política de privacidade do Askora {{icon:arrow-up}}</a
     >
+    <section
+      class="cookie-preferences"
+      aria-labelledby="cookie-preferences-title"
+    >
+      <h3 id="cookie-preferences-title">Cookies de medição de anúncios</h3>
+      <p>
+        Com sua permissão, usamos cookies do Google Ads para medir cliques de
+        encaminhamento ao WhatsApp. Não usamos essa permissão para personalizar
+        anúncios. Você pode mudar sua escolha a qualquer momento aqui.
+      </p>
+      <p data-cookie-status role="status">Medição de anúncios desativada.</p>
+      <div class="cookie-actions">
+        <button type="button" data-cookie-choice="denied">Recusar</button>
+        <button type="button" data-cookie-choice="granted">
+          Permitir medição
+        </button>
+      </div>
+    </section>
     <p>Dúvidas: <a href="mailto:{{email}}">{{email}}</a></p>
   </div>
 </dialog>
+
+<aside
+  class="cookie-notice"
+  data-cookie-notice
+  aria-label="Cookies de medição de anúncios"
+  hidden
+>
+  <p>
+    Podemos usar cookies do Google Ads para medir cliques no WhatsApp? Você pode
+    mudar sua escolha em Privacidade.
+  </p>
+  <div class="cookie-actions">
+    <button type="button" data-cookie-choice="denied">Recusar</button>
+    <button type="button" data-cookie-choice="granted">Permitir medição</button>
+  </div>
+</aside>
