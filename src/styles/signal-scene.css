@@ -126,7 +126,7 @@
   display: block;
   pointer-events: none;
   user-select: none;
-  filter: invert(1) brightness(0.76) contrast(0.92);
+  filter: brightness(0.9);
   opacity: 0.9;
   transition:
     filter 0.5s,
@@ -170,7 +170,7 @@
 }
 .signal-stage[data-state='on'] .signal-core img {
   opacity: 1;
-  filter: invert(1) brightness(0.98) contrast(0.98);
+  filter: none;
 }
 .signal-stage[data-state='on'] .signal-power-icon {
   color: var(--signal-cyan);

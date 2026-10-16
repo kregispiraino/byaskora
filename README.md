@@ -217,3 +217,9 @@ A conversão ocorre **somente no clique em “Conversar pelo WhatsApp” dentro 
 O aviso de consentimento permite aceitar ou recusar a medição e rever a escolha em **Privacidade**. Sem aceitação, não carregamos a tag nem enfileiramos conversões para envio posterior. Personalização de anúncios permanece desativada. Detalhes, identificadores conferidos na conta e validação em [docs/GOOGLE-ADS.md](docs/GOOGLE-ADS.md).
 
 O controle de consentimento e o rastreamento acrescentam aproximadamente 3 KB ao JavaScript compartilhado. O limite de teste de Reestruturação passa a 28 KB; as demais páginas mantêm 25 KB. Os números da revisão anterior acima são históricos.
+
+## Símbolo visual do Askora
+
+O ByAskora usa o mesmo losango em degradê ciano do Askora. `public/assets/images/askora-symbol.webp` e `askora-favicon.png` são cópias dos arquivos oficiais `askora-mark.webp` e `favicon.png` de `askora_v2/apps/public/src/assets/`. O símbolo aparece no rodapé, no modal de contato, na seção institucional, no CTA final e no circuito de Reestruturação, além dos dados estruturados. O circuito preserva a cor original, sem o filtro de inversão usado pelo símbolo preto anterior.
+
+A imagem de compartilhamento é `preview-social-askora.jpg`, capturada da institucional atual em 1200 × 630. Os arquivos antigos foram removidos e os novos nomes evitam reutilizar as imagens anteriores em cache.

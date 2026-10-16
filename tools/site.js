@@ -68,7 +68,7 @@ export function structuredData(site, page = null, pageUrl = site.url) {
         url: site.url,
         email: site.email,
         telephone: site.phone,
-        logo: `${site.url}assets/images/askora-mark-black.webp`,
+        logo: `${site.url}assets/images/askora-symbol.webp`,
         parentOrganization: {
           '@type': 'Organization',
           name: site.company,

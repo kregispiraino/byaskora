@@ -34,6 +34,7 @@
 .closing-mark img {
   width: 29px;
   height: 40px;
+  object-fit: contain;
 }
 .closing-content h2 {
   font-size: 36px;
